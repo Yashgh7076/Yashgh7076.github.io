@@ -1,7 +1,11 @@
-body {
-	font-family: sans-serif, Arial, Helvetica;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-h1, h2 {
-	font-family: sans-serif, Arial, Helvetica;
+figure {
+	text-align: center;
+	text-indent: 0;
+	float: center;	
 }
