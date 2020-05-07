@@ -74,14 +74,36 @@
 			</figure>
 
 			<h4> Model evaluation </h4>
-			<p> The deep learning model was evaluated using three stages, with the average accuracy per meal being reported in each case. The first stage evaluated how many indices matched between the ground truth labels and the classifier output. This was the simplest stage of evaluation, but it included a score for matching in both directions, i.e. classifier against ground truth and ground truth against classifier in order to perform a sanity check for our model. Consider two scenarios, one in which the model output matches matches the ground truth perfectly but only produces a limited number of responses. In the other scenario the model output matches all of the ground truth indices, but produces a lot of spurious responses in between. In the former case, the percentage accuracy of classifier indices would be very high, but that corresponding to the ground truth indices would be lower. Exactly the reverse would occur in the latter case. As both these scenarios are undesirable, we need both accuracies of matching between indices to be as high as possible for the model to be considered useful.</p>
+			<p> The deep learning model was evaluated using three stages, with the average accuracy per meal being reported in each case. The first stage evaluated how many indices matched between the ground truth labels and the classifier output. This was the simplest stage of evaluation, but it included a score for matching in both directions, i.e. classifier against ground truth and ground truth against classifier in order to perform a sanity check for our model. Consider two scenarios, one in which the model output matches matches the ground truth perfectly but only produces a limited number of responses. In the other scenario the model output matches all of the ground truth indices, but produces a lot of spurious responses in between. In the former case, the percentage accuracy of classifier indices would be very high, but that corresponding to the ground truth indices would be lower. Exactly the reverse would occur in the latter case. As both these scenarios are undesirable, we need both accuracies of matching between indices to be as high as possible for the model to be considered useful. As shown in the table below, the accuracy of the classifier was sufficiently high for both scenarios mentioned above, and the standard deviation of the percentage of indices correctly identified was low indicating that model output does not change much from meal to meal. </p>
 
 			<table class="center">
 				<caption> Percentage of indices correct per meal </caption>
 				<tr> <th> Metric</th> <th> Ground Truth </th> <th> Classifier output</th>	</tr>
 				<tr> <td> Average</td> <td>73.12</td> <td>79.80</td></tr>
 				<tr> <td>Standard Deviation</td> <td>14.19</td> <td>9.98</td></tr>
-			</table>			
+			</table>
+
+			<p>
+				At the second stage, we are interested in knowing the accuracy of the classifier at detecting gestures correctly in each meal. The ground truth and classifier output were compared based on their overlap. If either classifier output or ground truth label had more than 50% overlap and had the same label for the duration of time corresponding to the ground truth label, without considering exact start and end points, the model output was considered correct. This was the same if the classifier identified more than one distinct gesture within the boundaries of the ground truth label, but each gesture had the same label as that of the ground truth. If the classifier had no output throughout the small segment of time corresponding to the ground truth label, it was termed as a miss. However if the classifier had a single output, but the label did not match with that of the ground truth, the response was considered mislabeled. When the classifier identified two or more gestures within the boundaries of the ground truth, but atleast one of these was incorrect, the response was labeled as mangled. Finally if the classifier identified a unique gesture, but none was present in the ground truth, considering 50% overlap from the start and end points of the classifier output, the classifier response was labeled as false positive.  
+			</p>
+
+			<p> The table shown below lists the average percentage of correctly identified gestures per meal, and the standard deviation of the average percentage of gestures correctly identified in each meal. We see that the classifier is able to identify a large portion of gestures correctly in each meal, with a reasonably small standard deviation, which indicates that the classifier output does not change much from meal to meal. The percentage of incorrectly identified gesture categories is sufficiently low in each case, with lower standard deviations indidcating that the classifier is robust at labeling gestures within each meal.</p>
+			
+			<table class="center">
+				<caption> Percentage of gestures correct per meal </caption>
+				<tr> <th>Metric</th> <th>Correct</th> <th>Missed</th> <th>Mislabeled</th> <th>Mangled</th> <th>False Positive</th> </tr>
+				<tr> <td>Average</td> <td>77.77</td> <td>11.27</td> <td>5.08</td> <td>5.86</td> <td>16.37</td> </tr>
+				<tr> <td>Standard Deviation</td> <td>13.79</td> <td>8.62</td> <td>5.80</td> <td>5.00</td> <td>11.28</td> </tr>
+			</table>
+
+			<p> Finally we are also interested in knowing the accuracy of the classifier for each distinct gesture category. This too was evaluated using overlap between classifier output and the ground truth as described above. The following table lists the average percentage of correctly identified gesture categories per meal, and the standard deviation of the average percentage of correctly identified gestures per meal. We see that the average percentage of correctly identified gesture is sufficiently high for each category associated with eating activity, close to 80% in each case with acceptable standard deviation in each case. It was observed that the classifier was unable to identify any gesture from the category 'other'. This was most likely because the recordings contain a lot of variation for this category (owing to the large number of activities collectively termed as 'other' in the labeleing process), while the amount of training data available for this category was far fewer as compared to the amount of data available for the remaining four categories. As a result the classifier was unable to correctly identify any gesture from this particular category.</p>
+
+			<table class="center">
+				<caption> Percentage of gestures correct per meal </caption>
+				<tr> <th>Metric</th> <th>Bite</th> <th>Drink</th> <th>Utensiling</th> <th>Rest</th> <th>Other</th> </tr>
+				<tr> <td>Average</td> <td>79.61</td> <td>80.71</td> <td>78.71</td> <td>80.97</td> <td>0</td> </tr>
+				<tr> <td>Standard Deviation</td> <td>19.47</td> <td>26.78</td> <td>19.09</td> <td>18.02</td> <td>0</td> </tr>
+			</table>
             
 	</div>
 </body>
