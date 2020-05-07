@@ -11,10 +11,14 @@ figure {
 	float: center;	
 }
 
-table, th, td {
+table, tr, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
+}
+
+tr.noBorder td {
+  border: 0px;
 }
 
 table.center {
