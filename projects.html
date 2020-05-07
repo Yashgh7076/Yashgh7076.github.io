@@ -2,36 +2,71 @@
 	<title>Projects</title>
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<h2> Deep Learning Projects </h2>
 
-<p> Neural networks are a computational tool, which can be used for machine related tasks such as data classification, image annotation and image segmentation. These consist of units known as neurons, which are inspired by biological neurons present in brain cells. When multiple neurons, each having a similar function are arranged together the resulting arrangement is known as a layer. Typically neural networks have atleast three different types of layers, an input layer used for broadcasting the input to subsequent layers, an output layer for converting the neural network response to a form most suitable for the particular task and one or more hidden layer. The hidden layers work by mapping the input data into increasingly complex manifolds or dimensions, such that characteristics of the data can be used to perform the machine task accurately.</p>
 
-<p> Deep learning classifiers are a part of the family of neural networks, and consist of far more hidden layers than conventional neural networks. In addition, the function of each hidden layer is usually different from that of its neighboring layers. Using these different layers, deep learning classifiers can not only learn better mappings of input data, but also better combinations of these mappings. This improves the accuracy of the classifier tremendously. Hence deep learning models have been used in many state-of-the-art applications such as handwritten digit classification, self-driving cars and synthetic image synthesis, with new applications being used or updated regularly. </p>
+<body>
 
-<h3> Segmentation of eating gestures </h3>
-<p>A gesture is an activity of unspecified duration from the pre-defined set of known activities. Similar to sign-language in which specific manual articulations of the hands are associated with certain words or phrases, specific movements of the wrist during a meal can be associated with a particular gesture type. The ground truth for our model was marked by 18 human raters who observed subjects eating meals using a custom tool built by our group and hence needed to be trained beforehand in order to reduce the disrepancy between themselves. A total of 51,614 gestures were identified for a data set containing recordings from 276 participants, of which data corresponding to 264 participants was retained using the following definitions: </p>
-<ol type="1">
-	<li><b>Bite:</b> Any movement associated with moving food towards the mouth, need not specifically include movement from a plate towards the mout. Multiple small bites may be considered as a single gesture if these do not occur more than 1 second apart from each other.</li>
+	<div class="topnav">
+		<a href="index.html">Homepage</a>
+		<div class="dropdown">
+			<button class="dropbtn">Projects
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="projects.html">Deep learning projects</a>
+				<a href="#">Speech processing projects</a>
+				<a href="#">Computer vision projects</a>
+				<a href="#">Machine learning projects</a>
+			</div>
+		</div>		
+	</div>
 
-	<li><b>Drink:</b> Same as that for a bite, but multiple drinks should each be separated as an individual gesture.</li>
-	
-	<li><b>Utensiling:</b> Motion associated with getting food/beverage ready for consumption, such as cutting food into bite sized pieces and stirring a liquid. As soon as the hand starts moving towards the mouth, the associated intake gesture (bite/drink) should be used instead.</li>
+	<div class="content">
+		<h2> Deep Learning Projects </h2>
+		<p> Neural networks are a computational tool, which can be used for machine related tasks such as data classification, image annotation and image segmentation. These consist of units known as neurons, which are inspired by biological neurons present in brain cells. When multiple neurons, each having a similar function are arranged together the resulting arrangement is known as a layer. Typically neural networks have atleast three different types of layers, an input layer used for broadcasting the input to subsequent layers, an output layer for converting the neural network response to a form most suitable for the particular task and one or more hidden layer. The hidden layers work by mapping the input data into increasingly complex manifolds or dimensions, such that characteristics of the data can be used to perform the machine task accurately.</p>
 
-	<li><b>Rest:</b> Activity associated with periods of rest that occur in between other gestures. It ends as soon as intent to perform other activity becomes clear.</li>
+		<p> Deep learning classifiers are a part of the family of neural networks, and consist of far more hidden layers than conventional neural networks. In addition, the function of each hidden layer is usually different from that of its neighboring layers. Using these different layers, deep learning classifiers can not only learn better mappings of input data, but also better combinations of these mappings. This improves the accuracy of the classifier tremendously. Hence deep learning models have been used in many state-of-the-art applications such as handwritten digit classification, self-driving cars and synthetic image synthesis, with new applications being used or updated regularly. </p>
 
-	<li><b>Other:</b> All other wrist motion such as using a napkin to clean the face, moving plates away, gesturing to a friend etc. can be treated as the other category. This category included all ambiguous activity from the earlier categories.</li>
+		<h3> Segmentation of eating gestures </h3>
+        <p>A gesture is an activity of unspecified duration from the pre-defined set of known activities. Similar to sign-language in which specific manual articulations of the hands are associated with certain words or phrases, specific movements of the wrist during a meal can be associated with a particular gesture type.
 
-	<li><b>Unlabeled:</b> Any activity not marked by the human raters was treated as the unlabeled type. Its significance is explained later.</li>
-</ol>
+			<h4> Data </h4>
+			<p>
+			The data for our research consisted of wrist-motion activitity recorded from 276 people eating a meal at the Harcombe Dining Hall at Clemson University. Each recording contains measurements from a 3-axis accelerometer and 3-axis gyroscope (yaw, pitch and roll), which are collectively known as an intertial measurment unit (IMU). When mounted on the wrist, an accelerometer measures the orientation of the wrist relative to its three axes, while a gyroscope measures the angular velocity of the wrist during motion with respect to its own axes.</p>
 
-<p>For more information on the process of generating ground truth labels, the interested reader is asked to refer to <a href="http://cecas.clemson.edu/~ahoover/cafeteria/">Clemson Cafeteria Dataset</a>, or contact me using the email address mentioned just before <a href="index.html">About me</a>.</p>
+			<p>
+			The ground truth for our model was marked by 18 human raters who observed subjects eating meals using a custom tool built by our group and hence needed to be trained beforehand in order to reduce the disrepancy between themselves. A total of 51,614 gestures were identified from the data set, of which data corresponding to 264 participants was retained and labeled using the following definitions: </p>
 
-<p>
-<figure>
-	<img src="images/cafeviewgt_no_scale.png" style="width:50%;border:1px solid black"> <!--1422/727!--> 
-	<figcaption> A portion of a meal after bring marked by trained raters. The gestures are indicated using, red: bite, aqua: drink, orange: utensiling, black: rest and gray: other.</figcaption>
-</figure>
-</p>
+			<ol type="1">
+				<li><b>Bite:</b> Any movement associated with moving food towards the mouth, need not specifically include movement from a plate towards the mout. Multiple small bites may be considered as a single gesture if these do not occur more than 1 second apart from each other.</li>
+			
+				<li><b>Drink:</b> Same as that for a bite, but the subject should move the container (cup/glass) towards the mouth using their hand. Multiple sips should each be separated as individual gestures.</li>
+			
+				<li><b>Utensiling:</b> Motion associated with getting food/beverage ready for consumption, such as cutting food into bite sized pieces and stirring a liquid. As soon as the hand starts moving towards the mouth, the associated intake gesture (bite/drink) should be used instead.</li>
+			
+				<li><b>Rest:</b> Activity associated with periods of rest that occur in between other gestures. It ends as soon as intent to perform other activity becomes clear.</li>
+			
+				<li><b>Other:</b> All other wrist motion such as using a napkin to clean the face, moving plates away, gesturing to a friend etc. can be treated as the other category. This category included all ambiguous activity from the earlier categories.</li>
+			
+				<li><b>Unlabeled:</b> Any activity not marked by the human raters was treated as the unlabeled type. Its significance is explained later.</li>
+			</ol>
+
+			<p>For more information on the process of generating ground truth labels, the interested reader is asked to refer to <a href="http://cecas.clemson.edu/~ahoover/cafeteria/">Clemson Cafeteria Dataset</a>, or contact me using the email address mentioned on the <a href="index.html">Homepage</a>.</p>
+
+			<figure>
+				<img src="images/cafeviewgt_no_scale.png" style="width:70%;border:1px solid black"> <!--1422/727!-->
+				<figcaption> A portion of a meal after bring marked by trained raters. The gestures are indicated using, red: bite, aqua: drink, orange: utensiling, black: rest and gray: other.</figcaption>
+			</figure>
+
+			<h4> Deep learning model </h4>
+            Our deep learning model was inspired by the recent success of deep learning classifiers in segmenting images from <a href="https://www.robots.ox.ac.uk/~vgg/data/pets/">The Oxford-IIIT Pet Dataset</a> as shown in the <a href="https://www.tensorflow.org/tutorials/images/segmentation">Image segmentation</a> tutorial on the TensorFlow website.
+	</div>
+</body>
+
+
+
+
+
 
 
 
