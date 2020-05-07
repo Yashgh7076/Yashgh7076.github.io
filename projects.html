@@ -72,6 +72,16 @@
 				<img src="images/cafeviewop_no_scale.png" style="width:70%;border:1px solid black"> <!--1422/727!-->
 				<figcaption> Comparing ground truth (top) against classifier output (bottom) using the same color labels as those mentioned above.</figcaption>
 			</figure>
+
+			<h4> Model evaluation </h4>
+			<p> The deep learning model was evaluated using three stages, with the average accuracy per meal being reported in each case. The first stage evaluated how many indices matched between the ground truth labels and the classifier output. This was the simplest stage of evaluation, but it included a score for matching in both directions, i.e. classifier against ground truth and ground truth against classifier in order to perform a sanity check for our model. Consider two scenarios, one in which the model output matches matches the ground truth perfectly but only produces a limited number of responses. In the other scenario the model output matches all of the ground truth indices, but produces a lot of spurious responses in between. In the former case, the percentage accuracy of classifier indices would be very high, but that corresponding to the ground truth indices would be lower. Exactly the reverse would occur in the latter case. As both these scenarios are undesirable, we need both accuracies of matching between indices to be as high as possible for the model to be considered useful.</p>
+
+			<table class="center">
+				<caption> Percentage of indices correct per meal </caption>
+				<tr> <th> Metric</th> <th> Ground Truth </th> <th> Classifier output</th>	</tr>
+				<tr> <td> Average</td> <td>73.12</td> <td>79.80</td></tr>
+				<tr> <td>Standard Deviation</td> <td>14.19</td> <td>9.98</td></tr>
+			</table>			
             
 	</div>
 </body>
