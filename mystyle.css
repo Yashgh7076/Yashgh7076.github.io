@@ -1,3 +1,4 @@
+/*Images, figures and tables*/
 img {
   display: block;
   margin-left: auto;
@@ -10,6 +11,18 @@ figure {
 	float: center;	
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+/*Body, navigation bar, links etc.*/
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
