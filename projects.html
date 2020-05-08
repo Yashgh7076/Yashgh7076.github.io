@@ -112,6 +112,16 @@
 				<tr> <td>Average (% age) </td> <td>79.61</td> <td>80.71</td> <td>78.71</td> <td>80.97</td> <td>0</td> </tr>
 				<tr> <td>Standard Deviation (% age)</td> <td>19.47</td> <td>26.78</td> <td>19.09</td> <td>18.02</td> <td>0</td> </tr>
 			</table>
+
+			<h4> Observations & Conclusions </h4>
+			<p> In order to understand the model better, particularly to understand meals in which the model was unable to correctly identify the eating gestures, we plotted a histogram of the percentage of correctly identified gestures in each meal against the total number of meals having that particular percentage. This is shown in the following figure.</p>
+
+			<figure>
+				<img src="images/gestures_hist.svg" style="width:70%;border:1px solid black">
+				<figcaption> Histogram of percentage accuracy in each meal against the total number of meals with that particular percentage.</figcaption>
+			</figure>
+			
+			<p> We see from the figure that the distribution is long-tailed trailing sharply beyond 3 standard deviations. This indicates that the meals in which the model is unable to identify gestures are most likely outliers from within the data set.</p>
             
 	</div>
 </body>
