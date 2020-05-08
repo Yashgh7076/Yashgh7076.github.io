@@ -96,10 +96,10 @@
 			<p> The table shown below lists the average percentage of correctly identified gestures per meal, and the standard deviation of the average percentage in each meal. We see that the classifier is able to identify a large portion of gestures correctly on average per meal, with a reasonably small standard deviation. The percentage of incorrectly identified gesture categories is also sufficiently low in each case, with lower standard deviations indidcating that the classifier is robust against changes in wrist-motion and can be reliably used for labeling gestures within each meal.</p>
 			
 			<table class="center">
-				<caption> Percentage of gestures correct per meal </caption>
+				<caption> Total gestures correct per meal </caption>
 				<tr> <th>Metric</th> <th>Correct</th> <th>Missed</th> <th>Mislabeled</th> <th>Mangled</th> <th>False Positive</th> </tr>
-				<tr> <td>Average</td> <td>77.77</td> <td>11.27</td> <td>5.08</td> <td>5.86</td> <td>16.37</td> </tr>
-				<tr> <td>Standard Deviation</td> <td>13.79</td> <td>8.62</td> <td>5.80</td> <td>5.00</td> <td>11.28</td> </tr>
+				<tr> <td>Average (% age) </td> <td>77.77</td> <td>11.27</td> <td>5.08</td> <td>5.86</td> <td>16.37</td> </tr>
+				<tr> <td>Standard Deviation (% age)</td> <td>13.79</td> <td>8.62</td> <td>5.80</td> <td>5.00</td> <td>11.28</td> </tr>
 			</table>
 
 			<p> Finally we are also interested in knowing the accuracy of the classifier for each distinct gesture category. This too was evaluated using overlap between classifier output and the ground truth as described above. The following table lists the average percentage of correctly identified gesture categories per meal, and the standard deviation of the average percentage per meal. We see that the average percentage of correctly identified gestures is sufficiently high for each category associated with eating activity. Close to 80% of all gestures corresponding to eating such as 'bite', 'drink' and 'utensiling' were correctly identified in each meal with acceptable standard deviation in each case. The average accuracy of detecting the gesture 'rest' was also similarly high in each meal, with acceptable standard deviation in this case as well. </p>
@@ -107,10 +107,10 @@
 			<p> However it was observed that the classifier was unable to identify any gesture from the category 'other'. This was most likely because the recordings contain a lot of variation for this category (owing to the large number of activities collectively termed as 'other' in the labeleing process), while the amount of training data available for this category was a lot less as compared to the amount of data available for the remaining four categories. This is an example of an imbalanced data set, and machine learning models, especially deep learning neural networks are known to perform poorly on such data.</p>
 
 			<table class="center">
-				<caption> Percentage of gestures correct per meal </caption>
+				<caption> Categorical gestures correct per meal </caption>
 				<tr> <th>Metric</th> <th>Bite</th> <th>Drink</th> <th>Utensiling</th> <th>Rest</th> <th>Other</th> </tr>
-				<tr> <td>Average</td> <td>79.61</td> <td>80.71</td> <td>78.71</td> <td>80.97</td> <td>0</td> </tr>
-				<tr> <td>Standard Deviation</td> <td>19.47</td> <td>26.78</td> <td>19.09</td> <td>18.02</td> <td>0</td> </tr>
+				<tr> <td>Average (% age) </td> <td>79.61</td> <td>80.71</td> <td>78.71</td> <td>80.97</td> <td>0</td> </tr>
+				<tr> <td>Standard Deviation (% age)</td> <td>19.47</td> <td>26.78</td> <td>19.09</td> <td>18.02</td> <td>0</td> </tr>
 			</table>
             
 	</div>
