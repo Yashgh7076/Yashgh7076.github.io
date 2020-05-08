@@ -25,10 +25,24 @@
 		<p> Speech processing is the study of human speech signals, their representation, and the development of models and algorithms to perform some task such as speaker identification, speech enhancement or simply storing these signals most effectively on disk. Owing to the flexibility of programming software and the availibility of cheap computer memory, speech processing is usually processed in its digital representation. Hence speech processing can be regarded as a special application of digital signal processing to speech signals.</p>
 		
 		<h3> Speech enhancement using non-linear estimate of statistical properties of non-stationary noise sources.</h3>
-		<p> Our project focused on designing and building a single-channel speech enhancement system for far-end noise reduction. The given speech signal was assumed to be corrupted with additive complex Gaussian noise. As a requirement we needed to design an algorithm for estimating the power spectral density (PSD) of both the non-stationary noise and the clean speech. This is a challenging problem, because the statistical properties of non-stationary noise change over time. Hence the PSD needs to be estimated adaptively, and the speech enhancement needs to be adaptive as well. Moreover the algorithm complexity needed to be reasonable, since such a system will most likely be used in digital hearing aids. Such systems typically have power constraints and hence cannot work with too complex algorithms.</p>
+		<p> Our project focused on designing and building a single-channel speech enhancement system for far-end noise reduction. The given speech signal was assumed to be corrupted with additive complex Gaussian noise. As a requirement, we needed to design an algorithm for estimating the power spectral density (PSD) of both the non-stationary noise and the clean speech. This is a challenging problem, because the statistical properties of non-stationary noise change over time. Hence the PSD needs to be estimated adaptively, and the speech enhancement needs to be adaptive as well. Moreover the algorithm complexity needed to be reasonably low, since such a system will most likely be used in digital hearing aids. Such systems typically have power constraints and hence cannot work with too complex algorithms.</p>
 
 		<h4> Original Files</h4>
-		<p> Here are the original files for the clean speech (before noise is added) and the non-stationary noise included as part of the project.</p>
+		<p> Original clean speech audio file used as part of this project.</p>
+
+		<audio controls>
+			<source src="audio_files/clean.wav" type="audio/ogg">
+				Your browser does not support the audio element, please use a different browser.
+		</audio>
+
+		<p> Example of non-stationary noise which typically corrupts speech signals in digital hearing aids.</p>
+
+		<audio controls>
+			<source src="audio_files/intersection_soundjay.wav" type="audio/ogg">
+				Your browser does not support the audio element, please use a different browser.
+		</audio>
+
+
 
 		
     </div>
