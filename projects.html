@@ -121,8 +121,21 @@
 				<figcaption> Histogram of percentage accuracy in each meal against the total number of meals with that particular percentage.</figcaption>
 			</figure>
 			
-			<p> We see from the figure that the distribution is long-tailed trailing sharply beyond 3 standard deviations. This indicates that the meals in which the model is unable to identify gestures are most likely outliers from within the data set.</p>
-            
+			<p> We see from the figure that the distribution is long-tailed, trailing sharply beyond 3 standard deviations. This indicates that the meals in which the model is unable to identify gestures are most likely outliers from within the data set.</p>
+
+			<p> On plotting one image from this set, we observe that two distinct bite gestures have been identified for a period of recording which clearly appears to be indicative that the instrumented hand (fitted with the recording device) is at rest. This suggests that the rater in this case marked the activity correctly, but did not take into consideration it was occurring due to the uninstrumented hand. This is thought to be the most likely explanation, as to why the model was unable to correctly identify gestures from a larger set of meals.</p>
+
+			<figure>
+				<img src="images/cafeview_wh_sb.png" style="width:70%;border:1px solid black">
+				<figcaption> Activity marked for uninstrumented hand results in mislabeled gesture output of classifier.</figcaption>
+			</figure>
+			
+			<h4> Future work</h4>
+			<p>It is known from the principle of symmetry in biology, that motion in one wrist/hand leads to similar motion in the other wrist/hand. Since the overall goal of our research is to be able to identify eating gestures irrespective of the hand used, the next step would be designing a model that can identify gestures from wrist-motion in the instrumented hand that occurs due to actual eatimg related motion in the uninstrumented hand.</p>
+
+			<p> Additionally we also hope to expand the total number of categories of gestures, to include the hand (left/right), the type of utensil used to eat, the category of food etc. We hope that this approach will lead to an improvement in the accuracy of the classifier while at the same time leading to a more insightful model for tracking eating behavior.</p>
+
+			<p> Finally we are looking into training a deeper neural network, having more convolutional and deconvolutional blocks than the model considered in this research. We are also investigating other neural networks that could potentially be used to identify gestures belonging to the category 'other' while improving the classifier accuracy as well.</p>
 	</div>
 </body>
 
