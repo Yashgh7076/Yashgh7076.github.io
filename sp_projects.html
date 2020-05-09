@@ -151,7 +151,11 @@
 					Enhanced speech at 15dB input SNR.
 				</td>	
 			</tr>
-        </table>
+		</table>
+		
+		<p> We see from the recordings that the speech is more clearer and perceptible in each case, after the enhancement algorithm has been applied. This is particularly true at low SNR values, at which the noise completely dominates the recording.</p>
+		
+		<p></p>However there is some form of ringing artifact that occurs in each estimated speech signal associated with the enhancement algorithm. This is thought to be an effect of the reverse segmentation which is used to assemble the estimated speech signal for hearing. It is also likely that the use of a single channel enhancement scheme cannot fully mitigate the presence of non-stationary noise such as the one considered in this project. This leads to the discussion of future work in this project, which is discussed next.</p>
 
 		<h4>Future work</h4>
 		<p> This project considered single channel noise reduction in a speech signal assumed to be corrupted with additive noise. The algorithms developed for performing speech enhancement assumed the presence of complex Gaussian noise, which is common is most engineering systems. However it is expected that developing a new model that incorporates the super Gaussian noise assumption in its core algorithms would lead to an improvement and lead to a more optimal estimate of clean speech.</p>
