@@ -13,8 +13,7 @@
 			</button>
 			<div class="dropdown-content">
 				<a href="projects.html">Deep learning</a>
-				<a href="sp_projects.html">Speech processing</a>
-				<a href="ml_projects.html">Machine learning</a>
+				<a href="sp_projects.html">Speech processing</a>				
 			</div>
 		</div>
 		<a href="volunteer_work.html">Extra-curricular activities</a>
@@ -26,12 +25,14 @@
 		<p> Speech processing is the study of human speech signals, their representation, and the development of models and algorithms to perform some task such as speaker identification, speech enhancement or simply storing these signals most effectively on disk. Owing to the flexibility of programming software and the availibility of cheap computer memory, speech processing is usually processed in its digital representation. Hence speech processing can be regarded as a special application of digital signal processing to speech signals.</p>
 		
 		<h3> Speech enhancement using non-linear estimate of statistical properties of non-stationary noise sources.</h3>
+
+		<p> Contributors, <a href="https://www.linkedin.com/in/remykabel/">Remy Kabel</a>,<a href="https://www.linkedin.com/in/amritpal-singh-gill-2601485a/">Amritpal Singh Gill.</a></p>
 		<p> Our project focused on designing and building a single-channel speech enhancement system for far-end noise reduction. The given speech signal was assumed to be corrupted with additive complex Gaussian noise. As a requirement, we needed to design an algorithm for estimating the power spectral density (PSD) of both the non-stationary noise and the clean speech. This is a challenging problem, because the statistical properties of non-stationary noise change over time. Hence the PSD needs to be estimated adaptively, and the speech enhancement needs to be adaptive as well.</p> 
 		
 		<p>In addition, the algorithm complexity needed to be reasonably low since such a system will most likely be used in digital hearing aids. Such systems typically have power constraints and hence cannot work with too complex algorithms. Hence the Discrete Fouier Transform (DFT) was chosen to compute the spectral coefficients of the signal owing to its fast implementation using the Fast Fourier Transform (FFT) and computational simplicity over methods such as Karhunen–Lo&#232;ve transform (KLT). In addition using a DFT also allows us to understand frequency components in a speech signal clearly.</p>
 
 		<h4> Original Files</h4>
-		<p> Original files, clean speech audio file and non-stationary noise recording used as part of this project. Borrowed from course page, <a href="https://cas.tudelft.nl/Education/courses/in4182/index.php">Digital Audio and Speech Processing</a> (Note: Original files may have changed)</p>
+		<p> Original clean speech audio file used as part of this project. Borrowed from course page, <a href="https://cas.tudelft.nl/Education/courses/in4182/index.php">Digital Audio and Speech Processing</a> (Note: Original files may have changed)</p>
 
 		<audio controls>
 			<source src="audio_files/clean.wav" type="audio/ogg">
@@ -51,30 +52,30 @@
 		<figure>
 			<img src="images/sp_algorithm.svg" style="width:50%">
 			<figcaption> Flowchart of algorithm for adaptive speech enhancement.</figcaption>
-		</figure>
+		</figure> <br>
 
 		<p>
 			Many components of this algorithm are specific to this particular project, and are hence explained briefly below:
 			<ol type="1">
-				<li> <b>Dividing speech into segments:</b> All signal processing algorithms applied to the speech signal assume that it is wide sense stationary (WSS). In order to validate this assumption, the speech signal needs to be divided into segments of appropriate duration (chosen experimentally as 512) in which the speech signal can be assumed to be WSS.</li>
+				<li> <b>Dividing speech into segments:</b> All signal processing algorithms considered in this project assume that the speech signal is wide sense stationary (WSS) i.e. its statistical properties do not change over time. In order to validate this assumption, the speech signal needs to be divided into segments of appropriate duration (chosen experimentally as 512) in which the speech signal can be assumed to be WSS.</li><br>
 
-				<li> <b>Smoothing:</b> Each segment of the speech signal was smoothed by multiplying its time-domain values with a smoothing window. This leads to a better estimate of the periodogram using the DFT coefficients which is used as the estimate of the PSD. </li>
+				<li> <b>Smoothing:</b> Each segment of the speech signal was smoothed by multiplying its time-domain values with a smoothing window. This leads to a better estimate of the periodogram using the DFT coefficients which is used as the estimate of the PSD. </li><br>
 				
 				<li> <b>Estimation algorithms:</b> The actual algorithms used for estimating various parameters in each segment of speech signal are implemented exactly as described in the original research articles. These are as follows:
 					<ol type="i">
-						<li> Decision Directed (DD) approach for signal to noise ratio (SNR) estimation [1].</li>
+						<li> Decision Directed (DD) approach for signal to noise ratio (SNR) estimation is mentioned in [1].</li>
 
 						<li> Non-linear MMSE based estimation of noise PSD is a multi-step process as explained in [2].</li>
 					</ol>				
-				</li>
+				</li><br>
 
-				<li> <b>Undoing segmentation:</b> Once the clean speech was estimated by using the Inverse Discrete Fourier Transform (IDFT), speech samples that occurred in succesive segments owing to the overlap, were averaged and the output signal had the same length of time as that of the input.</li>
+				<li> <b>Undoing segmentation:</b> Once the clean speech was estimated by using the Inverse Discrete Fourier Transform (IDFT), speech samples occurred in succesive segments owing to the overlapping method of generating speech segments. Such samples were averaged and the resulting output signal had the same length as the input sequence.</li>
 
 			</ol>
 		</p>
 
 		<h4>Results</h4>
-		<p> This section includes the noisy signal, and the resulting signal after the noise reduction algorithm has been applied on each frame of the speech recording. In order to understand the effectiveness of the algorithm under different conditions, the noisy signal was added to the clean speech at different values of input SNR. It should be noted that the input SNR is different from the a priori SNR. The latter must be estimated in each frame of the speech signal, while the former can not be determined in practical systems without having the clean speech recording available at each time.</p>
+		<p> This section includes the noisy signal, and the resulting signal after the noise reduction algorithm has been applied on each frame of the speech recording. In order to understand the effectiveness of the algorithm under different conditions, the noisy signal was added to the clean speech at different values of input SNR. It should be noted that the input SNR is different from the a priori SNR. The latter must be estimated in each frame of the speech signal, while the former can only be determined in laboratory conditions such as those in this experiment. In order to be considered practically useful, the enhancement algorithm must work at multiple values of input SNR, but particularly at low SNR, when sound quality degrades considerably.</p>
 
 		<table class="center">
 			<caption> Experimental results of applying the noise reduction algorithm.</caption>
@@ -152,18 +153,18 @@
 					Enhanced speech at 15dB input SNR.
 				</td>	
 			</tr>
-		</table>
+		</table><br>
 		
 		<p> We see from the recordings that the speech is more clearer and perceptible in each case, after the enhancement algorithm has been applied. This is particularly true at low SNR values, at which the noise completely dominates the recording.</p>
 		
 		<p></p>However there is some form of ringing artifact that occurs in each estimated speech signal associated with the enhancement algorithm. This is thought to be an effect of the reverse segmentation which is used to assemble the estimated speech signal for hearing. It is also likely that the use of a single channel enhancement scheme cannot fully mitigate the presence of non-stationary noise such as the one considered in this project. This leads to the discussion of future work in this project, which is discussed next.</p>
 
 		<h4>Future work</h4>
-		<p> This project considered single channel noise reduction in a speech signal assumed to be corrupted with additive noise. The algorithms developed for performing speech enhancement assumed the presence of complex Gaussian noise, which is common is most engineering systems. However it is expected that developing a new model that incorporates the super Gaussian noise assumption in its core algorithms would lead to an improvement and lead to a more optimal estimate of clean speech.</p>
+		<p> This project considered single channel noise reduction in a speech signal assumed to be corrupted with additive noise. The algorithms developed for performing speech enhancement assumed the presence of complex Gaussian noise, which is common is most engineering systems. However it is expected that an algorithm that incorporates the super Gaussian noise in its model design would lead to an improvement and lead to a more optimal estimate of clean speech.</p>
 
-		<p> It is also expected that using a multi-channel approach at noise reduction, the quality of speech enhancement can be greatly improved. Multi-channel systems such as those that use a signal processing concept known as beamforming, can exploit spatial information, such as the presence of microphones and their relative position to mitigate the effects of noise. Single-channel systems such as the one considered in this project is limited to using only temporal and spectral information available in the received signal.</p>
+		<p> It is also expected that the quality of speech enhancement can be greatly improved by using a multi-channel approach at noise. Multi-channel systems typically use a signal processing concept known as beamforming that can exploit spatial information, such as the presence of microphones and their relative position to mitigate the effects of noise. Single-channel systems such as the one considered in this project are limited to using only temporal and spectral information available in the received signal.</p>
 
-		<p> Adaptive filtering techniques such as the Kalman filter and the extended Kalman filter can be used by designing a set of system equations for modeling both the speech and additive noise. Finally using a particle filter, the assumption of Gaussian noise can also be relaxed and a more flexible model can be designed for noise reduction. 
+		<p> Adaptive filtering techniques such as the Kalman filter and the extended Kalman filter can be used by designing a set of system equations for modeling both the speech and additive noise. Such systems can be tuned by a parameter known as the Kalman Gain. This parameter allows us to balance the contribution of previous model estimates and the current signal recording in producing the current estimate of the clean speech signal. Finally using a particle filter, the assumption of Gaussian noise can also be relaxed and a more flexible model can be designed for noise reduction. 
 
 		<h4>References</h4>
 		<p>

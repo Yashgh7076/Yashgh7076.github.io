@@ -15,8 +15,7 @@
 			</button>
 			<div class="dropdown-content">
 				<a href="projects.html">Deep learning</a>
-				<a href="sp_projects.html">Speech processing</a>
-				<a href="ml_projects.html">Machine learning</a>
+				<a href="sp_projects.html">Speech processing</a>				
 			</div>
 		</div>	
 		<a href="volunteer_work.html">Extra-curricular activities</a>
@@ -25,14 +24,14 @@
 
 	<div class="content">
 		<h2> Deep learning</h2>
-		<p> Neural networks are a computational tool, which can be used for machine related tasks such as data classification, image annotation and image segmentation. These consist of units known as neurons, which are inspired by biological neurons present in brain cells. When multiple neurons, each having a similar function are arranged together the resulting arrangement is known as a layer. Typically neural networks have atleast three different types of layers, an input layer that is used for broadcasting the input to subsequent layers, an output layer for converting the neural network response to a form most suitable for the particular task and one or more hidden layers. The hidden layers work by mapping the input data into increasingly complex manifolds or dimensions, such that characteristics of the data can then be used to perform the machine task accurately.</p>
+		<p> Neural networks are a computational tool, which can be used for machine related tasks such as image classification, predictive analysis & forecasting, image annotation and image segmentation These consist of units known as neurons, which are inspired by biological neurons present in brain cells. When multiple neurons having a similar function are arranged together, the resulting arrangement is known as a layer. Typically neural networks have atleast three different types of layers, an input layer that is used for broadcasting the input to subsequent layers, an output layer for converting the neural network response to a form most suitable for the particular task and one or more hidden layers. The hidden layers work by mapping the input data into increasingly complex manifolds or dimensions, such that characteristics of the data can then be used to perform the machine task accurately.</p>
 
-		<p> Deep learning classifiers are a part of the family of neural networks, and consist of far more hidden layers than conventional neural networks. In addition, the function of each hidden layer is usually different from that of its neighboring layers. Using these different layers, deep learning classifiers can not only learn better mappings of input data, but also better combinations of these mappings. This improves the accuracy of the classifier tremendously. Hence deep learning models have been used in many state-of-the-art applications such as handwritten digit classification, self-driving cars and synthetic image synthesis, with new applications being used or updated regularly. </p>
+		<p> Deep learning classifiers are a part of the family of neural networks, and consist of far more hidden layers than conventional neural networks. In addition, the function of each hidden layer is usually different from that of its neighboring layers. Using these different layers, deep learning classifiers can not only learn better mappings of input data, but also better combinations of these mappings. This improves the accuracy of the classifier tremendously. Hence deep learning models have been used in many state-of-the-art applications such as handwritten digit classification, self-driving cars and synthetic image synthesis, with new applications being reported regularly. </p>
 
 		<h3> Segmentation of eating gestures.</h3>
-		<p>A gesture is an activity of unspecified duration from the pre-defined set of known activities. Similar to sign-language in which specific manual articulations of the hands are associated with certain words or phrases, specific movements of the wrist during a meal can be associated with a particular gesture type. To the best of our knowledge, we are the first group of people to successfully train a neural network to simultaneously detect and classify periods of wrist-motion recorded when subjects ate an unscripted meal into their corresponding gesture type.</p>
+		<p>A gesture is an activity of unspecified duration from a pre-defined set of known activities. Similar to sign-language in which specific manual articulations of the hands are associated with certain words or phrases, specific movements of the wrist during a meal can be associated with a particular gesture type. To the best of our knowledge, we are the first group of people to successfully train a neural network to simultaneously detect and classify periods of wrist-motion data into different categories. The data that was used to train our model was recorded when subjects ate an unscripted meal, and is hence more representative of the way people naturally eat their meals.</p>
 		
-		<p> Eating related activities are those such as moving food from the plate to the mouth, moving a glass or container to the mouth and sipping a drink while holding it, preparing a morsel of food, dipping food in sauce or gravy among a wide range of other movements. When eating an unscripted meal, people will have different variations and durations in their wrist movement for such activities. This makes detecting such activities difficult for a large group of people. In addition, activities completely unrelated to eating also occur frequently during a meal. These include activities such as gesturing to a friend, checking one's phone or simply placing the hand at rest. Due to the different combinations and durations of such activities in people, automatically segmenting these is a non-trivial problem.</p>
+		<p> Eating related activities are those such as moving food from the plate to the mouth, moving a glass or cup to the mouth and sipping a drink while holding it, preparing a morsel of food, dipping food in sauce or gravy etc. Note that these are simple examples from among a wide range of other movements. When eating an unscripted meal, people will have different variations and durations in their wrist movement for such activities. This makes detecting such activities difficult for a large group of people. In addition, activities completely unrelated to eating also occur frequently during a meal. These include activities such as gesturing to a friend, checking one's phone or simply placing the hand at rest in between different bites. Due to the different combinations and durations of such activities in people, automatically segmenting these is a non-trivial problem.</p>
 
 		<p> Detecting eating gestures from a meal is one of the many ways of automatically monitoring energy intake in people, which is the core research interest within our group. Calorific intake monitoring is seen as a method for preventing overweight and obesity in people, which is certainly on the rise both in the United States of America as well as in the world.</p>
 
@@ -41,18 +40,18 @@
 			The data for our research consisted of wrist-motion activitity recorded from 276 people eating a meal at the Harcombe Dining Hall at Clemson University. Each recording contains measurements from a 3-axis accelerometer (x, y and z) and a 3-axis gyroscope (yaw, pitch and roll). These are collectively known as an intertial measurment unit (IMU). When mounted on the wrist, an accelerometer measures the orientation of the wrist relative to its three axes, while a gyroscope measures the angular velocity of the wrist during motion with respect to its own axes.</p>
 
 			<p>
-			The ground truth for our model was marked by 18 trained human raters who observed subjects eating meals using a custom tool built by our group. The raters were trained to identify certain keypoints in each window, which would make identifying each gesture category easy. A total of 51,614 gestures were identified from the data set, of which data corresponding to 264 participants was retained and labeled using the following definitions: </p>
+			The ground truth for our model was marked by 18 trained human raters who observed subjects eating their meals using a custom tool built by our group. The raters were trained to identify certain keypoints in each window, which made the task of identifying each gesture category consistent across all raters. A total of 51,614 gestures were identified from the data set, of which data corresponding to 264 participants was retained and labeled using the following definitions: </p>
 
 			<ol type="1">
-				<li><b>Bite:</b> Any movement associated with moving food towards the mouth using one's own hand. This need not specifically include movement from a plate towards the mouth. Multiple small bites may be considered as a single gesture if these do not occur more than 1 second apart from each other.</li>
+				<li><b>Bite:</b> Any movement associated with moving food towards the mouth using one's own hand. This need not specifically include movement from a plate towards the mouth. Multiple small bites may be considered as a single gesture if these do not occur more than 1 second apart from each other.</li><br>
 			
-				<li><b>Drink:</b> Same as a bite, but the subject should move the container (cup/glass) towards the mouth using their hand. Multiple sips should each be separated as individual gestures.</li>
+				<li><b>Drink:</b> Same as a bite, but the subject should move the container (cup/glass) towards the mouth using their hand. Multiple sips should each be separated as individual gestures.</li><br>
 			
-				<li><b>Utensiling:</b> Motion associated with getting food/beverage ready for consumption, such as cutting food into bite sized pieces and stirring a liquid. As soon as the hand starts moving towards the mouth, the associated intake gesture (bite/drink) should be used instead.</li>
+				<li><b>Utensiling:</b> Motion associated with getting food/beverage ready for consumption. Activities such as cutting food into bite sized pieces and stirring a liquid fall into this category of gestures. As soon as the hand starts moving towards the mouth, the associated intake gesture (bite/drink) should be used instead.</li><br>
 			
-				<li><b>Rest:</b> Activity associated with periods of rest that occur in between other gestures. It ends as soon as intent to perform other activity becomes clear.</li>
+				<li><b>Rest:</b> Activity associated with periods of rest that occur in between other gestures. It ends as soon as intent to perform other activity becomes clear.</li><br>
 			
-				<li><b>Other:</b> All other wrist motion such as using a napkin to clean the face, moving plates away, gesturing to a friend etc. can be treated as the other category. This category included all ambiguous activity from the earlier categories.</li>
+				<li><b>Other:</b> All other wrist motion such as using a napkin to clean the face, moving plates away, gesturing to a friend etc. can be treated as the other category. This category included all ambiguous activity from the earlier categories.</li><br>
 			
 				<li><b>Unlabeled:</b> Any activity not marked by the human raters was treated as the unlabeled type. This is used to make the size of the vector of targets fed to the classifier the same size as the input. This does not appear in the display window of the custom tool shown below.</li>
 			</ol>
@@ -63,15 +62,17 @@
 				<img src="images/cafeviewgt_no_scale.png" style="width:70%"> <!--1422/727!-->
 				<figcaption> A portion of a meal after bring marked by trained raters. The gestures are indicated using, red: bite, aqua: drink, orange: utensiling, black: rest and gray: other.</figcaption>
 			</figure>
-
+			
 			<h4> Deep learning model </h4>
 			<p>
-				Our deep learning model was inspired by the recent success of deep learning classifiers in segmenting images from <a href="https://www.robots.ox.ac.uk/~vgg/data/pets/">The Oxford-IIIT Pet Dataset</a> as shown in the <a href="https://www.tensorflow.org/tutorials/images/segmentation">Image segmentation</a> tutorial on the TensorFlow website.
+				Our deep learning model was inspired by the recent success of deep learning classifiers in segmenting images from <a href="https://www.robots.ox.ac.uk/~vgg/data/pets/">The Oxford-IIIT Pet Dataset</a> as shown in the <a href="https://www.tensorflow.org/tutorials/images/segmentation">Image segmentation</a> tutorial on the TensorFlow website. Deep learning models have been successfully applied for image segmentation in images other than those of the Oxford-IIIT data set as well. However there has been no study reported that applied these on time-series data such as that recorded using IMU sensors.
 			</p>
 
 			<p>
-				Our pipeline also uses a deep learning model, which has a stack of convolutional blocks followed by a stack of deconvolutional blocks. The former can be thought of as mapping blocks, which generate feature mappings from the input space to the feature space, while the latter generate the reverse mappings from the feature space to the required output space. 
+				Our pipeline uses a deep learning model, which has a stack of convolutional blocks followed by a stack of deconvolutional blocks. Other layers such as a batch normalization layer, an activation function layer etc. are used when needed similar to the model shown in <a href="https://www.tensorflow.org/tutorials/images/segmentation">Image segmentation</a>. In such a network, convolutional blocks can be thought of as mapping blocks, which generate feature mappings from the input space to the feature space. In exactly the opposite way, deconvolutional blocks generate the mappings from the feature space to the required output space.  
 			</p>
+
+			<p> The following figure shows an example, in which a portion of a meal is labeled using our deep learning model. We can clearly see that the model is able to correctly identify many gestures within this small portion of time.</p>
 
 			<figure>
 				<img src="images/cafeviewop_no_scale.png" style="width:70%"> <!--1422/727!-->
@@ -79,40 +80,40 @@
 			</figure>
 
 			<h4> Model evaluation </h4>
-			<p> The deep learning model was evaluated using three stages, with the average accuracy per meal being reported in each case. The first stage evaluated how many indices matched between the ground truth labels and the classifier output. This was the simplest stage of evaluation, but it included a score for matching in both directions, i.e. classifier against ground truth and ground truth against classifier. This is used to perform a sanity check for our model. </p> 
+			<p> The deep learning model was evaluated using three stages, with the average accuracy per meal being reported in each case. The first stage evaluated how many indices matched between the ground truth labels and the classifier output. This was the simplest stage of evaluation, but it included a score for matching in both directions, i.e. classifier against ground truth and ground truth against classifier. Such an approach also allows us to perform a sanity check for our model. </p> 
 			
-			<p> Consider two scenarios, one in which the model output matches matches the ground truth perfectly but only produces a limited number of responses. In this case the percentage accuracy of classifier indices would be very high, but that corresponding to the ground truth indices would be lower. In the other scenario the model output matches all of the ground truth indices, but produces a lot of spurious responses in between, resulting in a high accuracy of matching in ground truth indices but a far lower accuracy of matching in the indices labeled by the model. As both these scenarios are undesirable, we need a high percentage of matching betwen both sets of indices. As shown in the table below, the accuracy of the classifier was sufficiently high for both scenarios mentioned above, and the standard deviation of the percentage of indices correctly identified was low indicating that model output does not change much from meal to meal. </p>
+			<p> Consider two scenarios, one in which the model identifies only a limited number of gestures, but the indices of these match those of the ground truth perfectly. In this case the percentage accuracy of classifier indices would be very high, but that corresponding to the ground truth indices would be low. In the other scenario the model produces a lot of spurious gestures but correctly matches all ground truth indices. This would result in a high accuracy of matching in ground truth indices but a far lower accuracy of matching in the indices labeled by the model. As both these scenarios are undesirable, we need a high percentage of matching betwen both sets of indices. As shown in the table below, the accuracy of the classifier was sufficiently high in both directions, and the standard deviation of the percentage of indices correctly identified was low in each case indicating that the model output does not change much from meal to meal. </p>
 
 			<table class="center">
 				<caption> Percentage of indices correct per meal </caption>
 				<tr> <th> Metric</th> <th> Ground Truth </th> <th> Classifier output</th>	</tr>
 				<tr> <td> Average</td> <td>73.12</td> <td>79.80</td></tr>
 				<tr> <td>Standard Deviation</td> <td>14.19</td> <td>9.98</td></tr>
-			</table>
+			</table><br>
 
-			<p>	At the second stage, we are interested in knowing the accuracy of the classifier at detecting gestures correctly in each meal. The ground truth and classifier output were compared based on their overlap. If either classifier output or ground truth label had more than 50% overlap in either direction and had the same label, the model output was considered correct. This was the same if the classifier identified more than one distinct gesture matching with the ground truth. </p>
+			<p>	At the second stage, we are interested in knowing the accuracy of the classifier at detecting all gestures correctly in each meal. In this case, the ground truth and classifier output were compared based on their overlap. If either classifier output and ground truth had more than 50% overlap in either direction and each had the same label, the model output was considered correct. This was the same if the classifier identified more than one distinct gesture matching with the ground truth. </p>
 				
-			<p>	If the classifier had no output throughout the segment of time corresponding to the ground truth, it was termed as a miss. However if the classifier had a single output, but the label did not match with that of the ground truth, the response was considered mislabeled. When the classifier identified two or more gestures within the boundaries of the ground truth, but atleast one of these was incorrect, the response was labeled as mangled. Finally if the classifier identified a unique gesture, but none was present in the ground truth, considering 50% overlap from the start and end points of the classifier output, the classifier response was labeled as false positive. </p>
+			<p>	If the classifier produced no output throughout the segment of time corresponding to the ground truth, it was termed as a miss. However if the classifier had a single output with more than 50% overlap, but the label did not match with that of the ground truth, the response was considered mislabeled. When the classifier identified two or more gestures within the boundaries of the ground truth, but atleast one of these was incorrect, the response was labeled as mangled. Finally if the classifier identified a unique gesture, but none was present in the ground truth, considering 50% overlap from the start and end points of the classifier output, the classifier response was labeled as false positive. </p>
 
-			<p> The table shown below lists the average percentage of correctly identified gestures per meal, and the standard deviation of the average percentage in each meal. We see that the classifier is able to identify a large portion of gestures correctly on average per meal, with a reasonably small standard deviation. The percentage of incorrectly identified gesture categories is also sufficiently low in each case, with lower standard deviations indidcating that the classifier is robust against changes in wrist-motion and can be reliably used for labeling gestures within each meal.</p>
+			<p> The table shown below lists the average percentage of correctly identified gestures per meal, and the standard deviation of the average percentage in each meal. We see that the classifier is able to identify a large portion of gestures correctly on average per meal, with a reasonably small standard deviation. The percentage of incorrectly identified gesture categories is also sufficiently low, along with low standard deviations in each case. This indidcates that the classifier is robust against changes in wrist-motion and can be reliably used for labeling gestures within each meal.</p>
 			
 			<table class="center">
 				<caption> Total gestures correct per meal </caption>
 				<tr> <th>Metric</th> <th>Correct</th> <th>Missed</th> <th>Mislabeled</th> <th>Mangled</th> <th>False Positive</th> </tr>
 				<tr> <td>Average (% age) </td> <td>77.77</td> <td>11.27</td> <td>5.08</td> <td>5.86</td> <td>16.37</td> </tr>
 				<tr> <td>Standard Deviation (% age)</td> <td>13.79</td> <td>8.62</td> <td>5.80</td> <td>5.00</td> <td>11.28</td> </tr>
-			</table>
+			</table><br>
 
-			<p> Finally we are also interested in knowing the accuracy of the classifier for each distinct gesture category. This too was evaluated using overlap between classifier output and the ground truth as described above. The following table lists the average percentage of correctly identified gesture categories per meal, and the standard deviation of the average percentage per meal. We see that the average percentage of correctly identified gestures is sufficiently high for each category associated with eating activity. Close to 80% of all gestures corresponding to eating such as 'bite', 'drink' and 'utensiling' were correctly identified in each meal with acceptable standard deviation in each case. The average accuracy of detecting the gesture 'rest' was also similarly high in each meal, with acceptable standard deviation in this case as well. </p>
+			<p> Finally we are also interested in knowing the accuracy of the classifier for each distinct gesture category. This too was evaluated using overlap between classifier output and the ground truth as described above. The following table lists the average percentage of correctly identified gesture categories per meal, and the standard deviation of the average percentage per meal. We see that the average percentage of correctly identified gestures is sufficiently high for each category associated with eating activity. Close to 80% of all gestures corresponding to eating such as 'bite', 'drink' and 'utensiling' were correctly identified in each meal with acceptable standard deviation in each case. The average accuracy of detecting the gesture 'rest' was also similarly high in each meal, with acceptable standard deviation in this case as well. Thus the model can reliably detect these from data present in different meals.</p>
 			
-			<p> However it was observed that the classifier was unable to identify any gesture from the category 'other'. This was most likely because the recordings contain a lot of variation for this category (owing to the large number of activities collectively termed as 'other' in the labeleing process), while the amount of training data available for this category was a lot less as compared to the amount of data available for the remaining four categories. This is an example of an imbalanced data set, and machine learning models, especially deep learning neural networks are known to perform poorly on such data.</p>
+			<p> However it was observed that the classifier was unable to identify any gesture from the category 'other'. This was most likely because the recordings contain a lot of variation for this category (owing to the large number of activities collectively termed as 'other' in the labeleing process), while the amount of training data available for this category was a lot less as compared to that available for the remaining four categories. This is an example of an imbalanced data set, and machine learning models, especially deep learning neural networks are known to perform poorly on such data.</p>
 
 			<table class="center">
 				<caption> Categorical gestures correct per meal </caption>
 				<tr> <th>Metric</th> <th>Bite</th> <th>Drink</th> <th>Utensiling</th> <th>Rest</th> <th>Other</th> </tr>
 				<tr> <td>Average (% age) </td> <td>79.61</td> <td>80.71</td> <td>78.71</td> <td>80.97</td> <td>0</td> </tr>
 				<tr> <td>Standard Deviation (% age)</td> <td>19.47</td> <td>26.78</td> <td>19.09</td> <td>18.02</td> <td>0</td> </tr>
-			</table>
+			</table> 
 
 			<h4> Observations & Conclusions </h4>
 			<p> In order to understand the model better, particularly to understand meals in which the model was unable to correctly identify the eating gestures, we plotted a histogram of the percentage of correctly identified gestures in each meal against the total number of meals having that particular percentage. This is shown in the following figure.</p>
@@ -124,7 +125,7 @@
 			
 			<p> We see from the figure that the distribution is long-tailed, trailing sharply beyond 3 standard deviations. This indicates that the meals in which the model is unable to identify gestures are most likely outliers from within the data set.</p>
 
-			<p> On plotting one image from this set, we observe that two distinct bite gestures have been identified for a period of recording which clearly appears to be indicative that the instrumented hand (fitted with the recording device) is at rest. This suggests that the rater in this case marked the activity correctly, but did not take into consideration it was occurring due to the uninstrumented hand. This is thought to be the most likely explanation, as to why the model was unable to correctly identify gestures from a larger set of meals.</p>
+			<p> On plotting one meal from this set, we observe that two distinct bite gestures have been identified for a period of recording which clearly appears to be indicative that the instrumented hand (fitted with the recording device) is at rest. This suggests that the rater in this case marked the activity correctly, but did not take into consideration it was occurring due to the uninstrumented hand. Several other meals of this type were identified, and it was observed that the model accuracy was low in each of these. This is thought to be the most likely explanation, as to why the model was unable to correctly identify gestures from a larger set of meals.</p>
 
 			<figure>
 				<img src="images/cafeview_wh_sb.png" style="width:70%">
@@ -132,7 +133,7 @@
 			</figure>
 			
 			<h4> Future work</h4>
-			<p>It is known from the principle of symmetry in biology, that motion in one wrist/hand leads to similar motion in the other wrist/hand. Since the overall goal of our research is to be able to identify eating gestures irrespective of the hand used, the next step would be designing a model that can identify gestures from wrist-motion in the instrumented hand that occurs due to actual eating related motion in the uninstrumented hand.</p>
+			<p>It is known from the principle of symmetry in biology, that motion in one wrist/hand leads to similar motion in the other wrist/hand. Since the overall goal of our research is to be able to identify eating gestures irrespective of the hand used, the next step would be to design a model that can identify gestures from associated wrist-motion in the instrumented hand that occurs due to actual wrist-motion in the uninstrumented hand.</p>
 
 			<p> Additionally we also hope to expand the total number of categories of gestures, to include the hand (left/right), the type of utensil used to eat, the category of food etc. We hope that this approach will lead to an improvement in the accuracy of the classifier while at the same time leading to a more insightful model for tracking eating behavior.</p>
 
