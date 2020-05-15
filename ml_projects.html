@@ -14,7 +14,7 @@
 			<div class="dropdown-content">
 				<a href="projects.html">Deep learning</a>
 				<a href="sp_projects.html">Speech processing</a>
-				<a href="ml_projects.html">Machine learning</a>
+				<!--<a href="ml_projects.html">Machine Learning</a>-->
 			</div>
 		</div>
 		<a href="volunteer_work.html">Extra-curricular activities</a>
@@ -35,15 +35,20 @@
 		<p> This project was part of my course Machine Learning at TU Delft. It was created as a Kaggle competition, seen here <a href="https://www.kaggle.com/c/final-assignment-in43202">Final Assignment IN4320</a>. The goal was to study different approaches for data processing, and classification that could be used to predict if a person would earn 40,000 Euros a year based on data collected from the census bureau. This was challenging because such data typically contains missing entries, because people do not answer all optional questions in surveys, which are the common way of collecting such data. In addition, the data contained both continuous and categorical features, with no particular ordering in the categorical variables. The instructors added an additional level of difficulty by increasing the percentage of missing entries, either by manual intervention or by choosing a particularly difficult data set to begin with. However the specific mode of data acquisition was not conveyed to us.</p>
 
 		<h4>Data</h4>
-		<p> A typical example of data contained in the data set is seen below:</p>
+		<p> A typical example of data contained in the data set is seen below. Please note that the entries with not a number (NaN) indicate that the data for that particular column are missing for the particular data entry.</p>
 		<table class="center">
 			<caption> Data set containing missing entries </caption>
 			<tr> <th>age</th> <th>work</th> <th>education</th> <th>education years</th> <th>marital status</th> <th>occupation</th> <th>relationship</th> <th>race</th> <th>sex</th> <th>investment income</th> <th>investment losses</th> <th>work (hrs/week)</th> <th>native country</th>	</tr>
+
 			<tr> <td>12.414</td> <td>92</td> <td>20</td> <td>NaN</td> <td>65</td> <td>14</td> <td>68</td> <td>101</td> <td>59</td> <td>692.01</td> <td>NaN</td> <td>NaN</td> <td>NaN</td> </tr>
 
 			<tr> <td>7.3211</td> <td>88</td> <td>3</td> <td>2.2282</td> <td>61</td> <td>96</td> <td>49</td> <td>101</td> <td>59</td> <td>NaN</td> <td>0</td> <td>19.099</td> <td>98</td> </tr>
 			
 		</table><br>
+
+		<p> On observation, both train and test data sets contained randomly missing entries, and there seemed to be no pattern to the missing entries, i.e. data was missing completely at random. In addition, there were very few entires that contained no missing data. Only about 600 entries contained no missing information from 10,500, the total number of entries. As the data contained mixed features (continuous and categorical), there was no method reported in literature that could be used to estimate the missing entries using an approach such as a joint distribution of the features.</p>
+
+		<p>It was thus decided to estimate each continuous features independent of each other. For continuous features, the technique of mean imputation was used, which replaces missing values with the mean of the distribution over the available features. A similar approach is followed for categorical features, but uses the mode (most commonly occuring category) of each categorical feature.</p>
 
     </div>
 </body>
