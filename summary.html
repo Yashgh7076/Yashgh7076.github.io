@@ -36,12 +36,9 @@
         <h2>Education</h2>
         <ul style="list-style-type:disc;">
 			<li> <p>MS., Clemson University, Computer Engineering, Aug. 2018 - May 2020.</p>
-				 <p> <b>MS Thesis:</b> Segmentation and recognition of eating gestures from wrist motion using deep learning. Implemented the first deep learning neural network in the world to simultaneously identify and label (semantic segmentation) periods of wrist motion into predefined categories based on specific set of activities occuring in each period of motion.</p>
-
-				 <p>Wrist motion was recorded using IMU sensors fitted in a watch-like device, and can be classified into distinct catgories or 'gestures' based on the activity occuring in a particular period of time. These include moving food from the plate to the mouth ('bite'), moving a cup towards the mouth ('drink'), preparing a morsel of food, or dipping food in gravy/sauce ('utensiling'), resting in between different activities ('rest') and all other activities collectively termed as 'other'.</p>
-
-				 <p> Our model achieved close to 80% average accuracy per meal at identifying all eating related gestures in the meals considered here: <a href="http://cecas.clemson.edu/~ahoover/cafeteria/">Clemson Cafeteria Dataset</a> with close to 20% standard deviation on average per meal for each gesture type related to eating. This indicates that the implemented model is robust against changes in wrist motion for a large group of people, and can be raliably used to track eating activity in people. For more information, please visit the project description, <a href="projects.html">Clemson University MS Thesis</a>. </p>
-
+				 <p> <b>MS Thesis:</b> Segmentation and recognition of eating gestures from wrist motion using deep learning. </p>
+				 
+				 <p> Wrist motion that is recorded using IMU sensors during eating, can be catgorized into distinct categories or 'gestures' based on the specific activity occurring in the instrumented hand for a small period of time. Our project aimed to detect when motion was occurring and simultaneously identify the type or gesture associated with the motion. We designed a novel neural network that was capable of identifying different gestures realted to eating with an accuracy of 80% and standard deviation of 20% on average per meal. For more information on the data please visit, <a href="http://cecas.clemson.edu/~ahoover/cafeteria/">Clemson Cafeteria Dataset</a>, and for the project itself please see, <a href="projects.html">Clemson University MS Thesis</a>. </p>
 				 <p> <b>Courses:</b> <ul style="list-style-type: disc;">
 									 <li> Analysis of Tracking Systems</li>
 									 <li> Deep Learning </li>
@@ -81,7 +78,7 @@
 
 			<li> <p>Graduate Student Summer Employee, Clemson University, May 2019 - Aug. 2019.</p>
 
-				<p> Conducted research on deep learning models that could generate synthetically stained images of cellular matter similar to samples stained by humans. Staining phase-contrast microscopy images is a common way of highlighting cellular matter for study in biological and life-sciences studies. However this approach needs to be done manually, requiring effort and can also destroy cellular matter once it has been stained.</p>
+				<p> Staining phase-contrast microscopy images is a common way of highlighting cellular matter for study in biological and life-sciences studies. However this approach needs to be done manually, requiring effort and can also destroy cellular matter once it has been stained.</p>
 
 				<p>Hence our approach was to use generative adversarial neural networks (GANs) to generate synthetic images that were similar to the target images stained by human operators. We conducted research on a new neural network known as cyclic conditional generative adversarial neural network (CC-GAN) by combining the objective functions and architectures of <a href="https://phillipi.github.io/pix2pix/">conditional GANs</a> and <a href="https://junyanz.github.io/CycleGAN/">cyclic GANs</a>. The resulting neural network achieved 0.9 similarity using the Pearson correlation coefficient with target images at low resolutions (256 x 256) and close to 0.8 similarity at full resolution (2048 x 2048). </p>
 
