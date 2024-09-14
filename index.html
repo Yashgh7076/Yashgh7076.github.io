@@ -1,68 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Yadnyesh Y. Luktuke</title>
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yadnyesh Y. Luktuke - Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-gray-800">Yadnyesh Y. Luktuke</div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
+                    <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="text-gray-800 hover:text-blue-600">Resume</a>
+                    <a href="projects.html" class="text-gray-800 hover:text-blue-600">Projects</a>
+                    <a href="summary.html" class="text-gray-800 hover:text-blue-600">Experience</a>
+                    <a href="volunteer_work.html" class="text-gray-800 hover:text-blue-600">Activities</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-3">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-blue-600">Home</a>
+                <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="block py-2 text-gray-800 hover:text-blue-600">Resume</a>
+                <a href="projects.html" class="block py-2 text-gray-800 hover:text-blue-600">Projects</a>
+                <a href="summary.html" class="block py-2 text-gray-800 hover:text-blue-600">Experience</a>
+                <a href="volunteer_work.html" class="block py-2 text-gray-800 hover:text-blue-600">Activities</a>
+            </div>
+        </nav>
+    </header>
 
-	<div class="topnav">
-		<a href="index.html">Homepage</a>
-		<a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf">Resume</a>
-		<div class="dropdown">
-			<button class="dropbtn">Projects
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="projects.html">Deep learning</a>
-				<a href="sp_projects.html">Speech processing</a>
-				<!--<a href="ml_projects.html">Machine Learning</a>-->
-			</div>
-		</div>
-		<a href="summary.html">Experience</a>
-		<a href="volunteer_work.html">Extra-curricular activities</a>
-		<a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ">Google Scholar Profile</a>
-		<div class="dropdown">
-			<button class="dropbtn">Social
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="https://www.linkedin.com/in/yyl1109/">LinkedIn</a>
-				<a href="https://github.com/Yashgh7076">GitHub</a>
-			</div>
-		</div>
-	</div>
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="images/profile-pic.JPG" alt="Yadnyesh Y. Luktuke" class="w-48 h-48 object-cover rounded-full mb-4 md:mb-0 md:mr-6">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800 mb-2">Yadnyesh Y. Luktuke</h1>
+                    <p class="text-gray-600 mb-2">Software Engineer | Machine Learning Researcher</p>
+                    <p class="text-gray-600 mb-2">Dearborn, Michigan</p>
+                    <p class="text-gray-600"><a href="mailto:luktuke.yadnyesh@gmail.com" class="text-blue-600 hover:underline">luktuke.yadnyesh@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
 
-	<div class="content">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">About me</h2>
+            <p class="text-gray-700 mb-4">
+                Hi, I'm Yadnyesh, an electronics engineer, machine learning researcher, and software programmer. I grew up in the city of Pune, India, and have briefly lived in Delft, in The Netherlands. Currently, I'm staying in Dearborn, Michigan, enjoying the quiet lifestyle that its residents seem to like as well.
+            </p>
+            <p class="text-gray-700 mb-4">
+                My academic journey started as an Electronics & Telecommunication Engineer at M.I.T - Pune in India, where I was introduced to the field of artificial intelligence. My first project classified the handwritten script on postal envelopes into two categories, English and the local script Devanagari. I-PASS, as it was called, was meant to assist in sorting envelopes at local postal offices.
+            </p>
+            <p class="text-gray-700">
+                Through my education and professional experience, I've built a strong foundation in applied mathematics, optimization, software programming, and statistical analysis. I also have solid programming skills in Python and C, including system programming, bash scripting, and deep learning model design using the TensorFlow and PyTorch APIs.
+            </p>
+        </div>
+    </main>
 
-		<div class="clearfix float-my-children">
-			<img src="images/profile-pic.JPG" style="width: 320px; height: 240px; float: left">
-			<div><ul style="list-style-type:none;">
-				<li>Yadnyesh Y. Luktuke</li>
-				<li><a href="mailto:luktuke.yadnyesh@gmail.com">luktuke.yadnyesh@gmail.com</a> </li>
-				<li> Dearborn, Michigan </li>
-			</ul></div>
-		</div>
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Yadnyesh Y. Luktuke. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="https://www.linkedin.com/in/yyl1109/" class="hover:text-blue-400">LinkedIn</a>
+                <a href="https://github.com/Yashgh7076" class="hover:text-blue-400">GitHub</a>
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ" class="hover:text-blue-400">Google Scholar</a>
+            </div>
+        </div>
+    </footer>
 
-		<h2> About me</h2>
-		
-		<!--Personal-->
-		<p> Hi, I'm Yadnyesh an electronics engineer, machine learning researcher and software programmer. I grew up in the city of Pune, India and have briefly lived in Delft, in The Netherlands. Currently I'm staying in San Francisco, California enjoying the quiet lifestyle that its residents seem to like as well. </p>
-		
-		<!--Academic-->
-		<p>My academic journey started as an Electronics & Telecommunication Engineer at <a href="http://www.mitpune.com/">M.I.T - Pune</a> in India where I was introduced to the field of artificial intelligence. My first project classified the handwritten script on postal envelopes into two categories, English and the local script <a href="https://en.wikipedia.org/wiki/Devanagari">Devanagari</a>. I-PASS as it was called, was meant to assist in sorting envelopes at local postal offices. I attended the Master of Electrical Engineering program at Delft University of Technology in the Netherlands from 2014 till 2017. There I focused on theoretical concepts from the fields of signal processing & classical pattern recognition.</p> 
-		
-		<p> I decided that I needed more practical experience in academic research, and hence attended Clemson University from 2018 till 2020. As part of the Master's in Computer Engineering program, I have worked on projects from the fields of electronic sensors, computer vision and deep learning. Recently, my Thesis got published at the <a href="https://bigdataieee.org/BigData2020/AcceptedPapers.html">2020 IEEE International Conference on Big Data</a>. It describes the first deep learning model that has been developed for simultaneously detecting and classifying periods of wrist activity into distinct categories known as eating gestures. Identifying periods of food or drink intake can be used to estimate the calories consumed as demonstrated <a href="https://cecas.clemson.edu/~ahoover/bite-counter/">here</a>.</p>		
-
-		<!--Work-->
-		<p>I enjoy analyzing challenging problems and developing novel software solutions for solving these. Some of the projects that I've worked on include renewable energy forecasting and day-ahead price forecasting for the Indian Energy Exchange (IEX), which I worked on as a Data Scientist at Climate Connect Pvt. Ltd. I also have experience in teaching undergraduate and graduate students, having being employed as a Co-Researcher at the Department of Computer Engineering at M.I.T - Pune and as a Graduate Teaching & Grading Assistant at Clemson University.</p>		
-
-		<!--Skills-->
-		<p>Through my education and professional experience I've built a strong foundation in applied mathematics, optimization, software programming and statistical analysis. I also have solid programming skills in Python and C, including system programming, bash scripting and deep learning model design using the TensorFlow and PyTorch API's.</p>
-
-		<!--Hobbies-->
-		<p>Other than programming I enjoy swimming and playing basketball. I'm a big fan of Michael Phelps and his absolute domination at the Butterfly event for over a decade. I also enjoy cooking and trying new dishes and restaurants. Please leave a message via email if you found this site interesting and would like to discuss some topic, or you've a position in mind that you think I'd be a good fit for.</p>
-
-    </div>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

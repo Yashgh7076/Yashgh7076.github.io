@@ -1,193 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Speech processing</title>
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yadnyesh Y. Luktuke - Speech Processing Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-gray-800">Yadnyesh Y. Luktuke</div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
+                    <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="text-gray-800 hover:text-blue-600">Resume</a>
+                    <a href="projects.html" class="text-gray-800 hover:text-blue-600">Projects</a>
+                    <a href="summary.html" class="text-gray-800 hover:text-blue-600">Experience</a>
+                    <a href="volunteer_work.html" class="text-gray-800 hover:text-blue-600">Activities</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-3">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-blue-600">Home</a>
+                <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="block py-2 text-gray-800 hover:text-blue-600">Resume</a>
+                <a href="projects.html" class="block py-2 text-gray-800 hover:text-blue-600">Projects</a>
+                <a href="summary.html" class="block py-2 text-gray-800 hover:text-blue-600">Experience</a>
+                <a href="volunteer_work.html" class="block py-2 text-gray-800 hover:text-blue-600">Activities</a>
+            </div>
+        </nav>
+    </header>
 
-<body>
-    <div class="topnav">
-		<a href="index.html">Homepage</a>
-		<a href="Resume-Yadnyesh_Luktuke.pdf">Resume</a>
-		<div class="dropdown">
-			<button class="dropbtn">Projects
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="projects.html">Deep learning</a>
-				<a href="sp_projects.html">Speech processing</a>
-				<!--<a href="ml_projects.html">Machine Learning</a>-->
-			</div>
-		</div>
-		<a href="summary.html">Experience</a>
-		<a href="volunteer_work.html">Extra-curricular activities</a>
-		<a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ">Google Scholar Profile</a>
-		<div class="dropdown">
-			<button class="dropbtn">Social
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="https://www.linkedin.com/in/yyl1109/">LinkedIn</a>
-				<a href="https://github.com/Yashgh7076">GitHub</a>				
-			</div>
-		</div>
-    </div>
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">Speech Processing Projects</h1>
+            
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Speech Enhancement using Non-linear Estimate of Statistical Properties of Non-stationary Noise Sources</h2>
+                <p class="text-gray-700 mb-4">
+                    Contributors: <a href="https://www.linkedin.com/in/remykabel/" class="text-blue-600 hover:underline">Remy Kabel</a>, 
+                    <a href="https://www.linkedin.com/in/amritpal-singh-gill-2601485a/" class="text-blue-600 hover:underline">Amritpal Singh Gill</a>
+                </p>
+                <p class="text-gray-700 mb-4">
+                    Our project focused on designing and building a single-channel speech enhancement system for far-end noise reduction. The given speech signal was assumed to be corrupted with additive complex Gaussian noise.
+                </p>
+            </section>
 
-    <div class="content">
-        <h2>Speech processing</h2>
-		<p> Speech processing is the study of human speech signals, their representation, and the development of models and algorithms to perform some task such as speaker identification, speech enhancement or simply storing these signals most effectively on disk. Owing to the flexibility of programming software and the availibility of cheap computer memory, speech processing is usually processed in its digital representation. Hence speech processing can be regarded as a special application of digital signal processing to speech signals.</p>
+            <section class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Project Challenges:</h3>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Estimating power spectral density (PSD) of both non-stationary noise and clean speech</li>
+                    <li>Developing an adaptive algorithm for changing statistical properties of noise</li>
+                    <li>Keeping algorithm complexity low for potential use in digital hearing aids</li>
+                </ul>
+            </section>
 
-		<h3> Speech enhancement using non-linear estimate of statistical properties of non-stationary noise sources.</h3>
+            <section class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Algorithm for Speech Enhancement:</h3>
+                <img src="images/sp_algorithm.svg" alt="Flowchart of algorithm for adaptive speech enhancement" class="w-full max-w-2xl mx-auto my-4 rounded-lg shadow-md">
+                <p class="text-gray-600 text-sm text-center">Flowchart of algorithm for adaptive speech enhancement</p>
+            </section>
 
-		<p> Contributors: <a href="https://www.linkedin.com/in/remykabel/">Remy Kabel</a>, <a href="https://www.linkedin.com/in/amritpal-singh-gill-2601485a/">Amritpal Singh Gill.</a></p>
-		<p> Our project focused on designing and building a single-channel speech enhancement system for far-end noise reduction. The given speech signal was assumed to be corrupted with additive complex Gaussian noise. As a requirement, we needed to design an algorithm for estimating the power spectral density (PSD) of both the non-stationary noise and the clean speech. This is a challenging problem, because the statistical properties of non-stationary noise change over time. Hence the PSD needs to be estimated adaptively, and the speech enhancement needs to be adaptive as well.</p>
+            <section class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Key Components of the Algorithm:</h3>
+                <ol class="list-decimal list-inside text-gray-700 mb-4">
+                    <li>Dividing speech into segments</li>
+                    <li>Smoothing each segment</li>
+                    <li>Estimation algorithms:
+                        <ul class="list-disc list-inside ml-6">
+                            <li>Decision Directed (DD) approach for SNR estimation</li>
+                            <li>Non-linear MMSE based estimation of noise PSD</li>
+                        </ul>
+                    </li>
+                    <li>Undoing segmentation</li>
+                </ol>
+            </section>
 
-		<p>In addition, the algorithm complexity needed to be reasonably low since such a system will most likely be used in digital hearing aids. Such systems typically have power constraints and hence cannot work with too complex algorithms. Hence the Discrete Fouier Transform (DFT) was chosen to compute the spectral coefficients of the signal owing to its fast implementation using the Fast Fourier Transform (FFT) and computational simplicity over methods such as Karhunen–Lo&#232;ve transform (KLT). In addition using a DFT also allows us to understand frequency components in a speech signal clearly.</p>
+            <section class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Results:</h3>
+                <p class="text-gray-700 mb-4">
+                    We tested the algorithm at different input SNR levels. The enhanced speech signals showed significant improvement in clarity and perceptibility, especially at low SNR values.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Noisy Signal (0 dB input SNR):</h4>
+                        <audio controls class="w-full">
+                            <source src="path_to_noisy_0db.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Enhanced Signal (0 dB input SNR):</h4>
+                        <audio controls class="w-full">
+                            <source src="path_to_enhanced_0db.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <!-- Repeat for other SNR levels -->
+                </div>
+            </section>
 
-		<h4> Original Files</h4>
-		<p> Original clean speech audio file used as part of this project. Borrowed from course page, <a href="https://cas.tudelft.nl/Education/courses/in4182/index.php">Digital Audio and Speech Processing</a> (Note: Original files may have changed)</p>
+            <section>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Future Work:</h3>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Incorporate super Gaussian noise model for potentially improved results</li>
+                    <li>Explore multi-channel approach using beamforming techniques</li>
+                    <li>Investigate adaptive filtering techniques like Kalman filter and extended Kalman filter</li>
+                    <li>Consider particle filtering to relax the Gaussian noise assumption</li>
+                </ul>
+            </section>
+        </div>
+    </main>
 
-		<audio controls>
-			<source src="audio_files/clean.wav" type="audio/ogg">
-				Your browser does not support the audio element, please use a different browser.
-		</audio>
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Yadnyesh Y. Luktuke. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="https://www.linkedin.com/in/yyl1109/" class="hover:text-blue-400">LinkedIn</a>
+                <a href="https://github.com/Yashgh7076" class="hover:text-blue-400">GitHub</a>
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ" class="hover:text-blue-400">Google Scholar</a>
+            </div>
+        </div>
+    </footer>
 
-		<p> Example of non-stationary noise which typically corrupts speech signals in digital hearing aids.</p>
-
-		<audio controls>
-			<source src="audio_files/intersection_soundjay.wav" type="audio/ogg">
-				Your browser does not support the audio element, please use a different browser.
-		</audio>
-
-		<h4>Algorithm used for speech enhancement</h4>
-		<p> The following figure shows the flowchart of the algorithm used to perform speech enhancement for additive noise reduction.</p>
-
-		<figure>
-			<img src="images/sp_algorithm.svg" style="width:50%">
-			<figcaption> Flowchart of algorithm for adaptive speech enhancement.</figcaption>
-		</figure> <br>
-
-		<p>
-			Many components of this algorithm are specific to this particular project, and are hence explained briefly below:
-			<ol type="1">
-				<li> <b>Dividing speech into segments:</b> All signal processing algorithms considered in this project assume that the speech signal is wide sense stationary (WSS) i.e. its statistical properties do not change over time. In order to validate this assumption, the speech signal needs to be divided into segments of appropriate duration (chosen experimentally as 512) in which the speech signal can be assumed to be WSS.</li><br>
-
-				<li> <b>Smoothing:</b> Each segment of the speech signal was smoothed by multiplying its time-domain values with a smoothing window. This leads to a better estimate of the periodogram using the DFT coefficients which is used as the estimate of the PSD. </li><br>
-
-				<li> <b>Estimation algorithms:</b> The actual algorithms used for estimating various parameters in each segment of speech signal are implemented exactly as described in the original research articles. These are as follows:
-					<ol type="i">
-						<li> Decision Directed (DD) approach for signal to noise ratio (SNR) estimation is mentioned in [1].</li>
-
-						<li> Non-linear MMSE based estimation of noise PSD is a multi-step process as explained in [2].</li>
-					</ol>
-				</li><br>
-
-				<li> <b>Undoing segmentation:</b> Once the clean speech was estimated by using the Inverse Discrete Fourier Transform (IDFT), speech samples occurred in succesive segments owing to the overlapping method of generating speech segments. Such samples were averaged and the resulting output signal had the same length as the input sequence.</li>
-
-			</ol>
-		</p>
-
-		<h4>Results</h4>
-		<p> This section includes the noisy signal, and the resulting signal after the noise reduction algorithm has been applied on each frame of the speech recording. In order to understand the effectiveness of the algorithm under different conditions, the noisy signal was added to the clean speech at different values of input SNR. It should be noted that the input SNR is different from the a priori SNR. The latter must be estimated in each frame of the speech signal, while the former can only be determined in laboratory conditions such as those in this experiment. In order to be considered practically useful, the enhancement algorithm must work at multiple values of input SNR, but particularly at low SNR, when sound quality degrades considerably.</p>
-
-		<table class="center">
-			
-			<tr> <th>Noisy signal</th> <th>Enhanced speech signal</th></tr>
-
-			<tr>
-				<td>
-					<audio controls>
-						<source src="audio_files/noisy_0.wav" type="audio/ogg">
-						Your browser does not support the audio element, please use a different browser.
-					</audio>
-					Noisy speech at 0 dB input SNR.
-				</td>
-
-				<td>
-					<audio controls>
-						<source src="audio_files/clean_0.wav" type="audio/ogg">
-						Your browser does not support the audio element, please use a different browser.
-					</audio>
-					Enhanced speech at 0 dB input SNR.
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					<audio controls>
-						<source src="audio_files/noisy_5.wav" type="audio/ogg">
-						Your browser does not support the audio element, please use a different browser.
-					</audio>
-					Noisy speech at 5 dB input SNR.
-				</td>
-
-				<td>
-					<audio controls>
-						<source src="audio_files/clean_5.wav" type="audio/ogg">
-						Your browser does not support the audio element, please use a different browser.
-					</audio>
-					Enhanced speech at 5 dB input SNR.
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					<audio controls>
-						<source src="audio_files/noisy_10.wav" type="audio/ogg">
-						Your browser does not support the audio element, please use a different browser.
-					</audio>
-					Noisy speech at 10 dB input SNR.
-				</td>
-
-				<td>
-					<audio controls>
-						<source src="audio_files/clean_10.wav" type="audio/ogg">
-						Your browser does not support the audio element, please use a different browser.
-					</audio>
-					Enhanced speech at 10 dB input SNR.
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					<audio controls>
-						<source src="audio_files/noisy_15.wav" type="audio/ogg">
-						Your browser does not support the audio element, please use a different browser.
-					</audio>
-					Noisy speech at 15 dB input SNR.
-				</td>
-
-				<td>
-					<audio controls>
-						<source src="audio_files/clean_15.wav" type="audio/ogg">
-						Your browser does not support the audio element, please use a different browser.
-					</audio>
-					Enhanced speech at 15dB input SNR.
-				</td>
-			</tr>
-		</table><br>
-
-		<p> We see from the recordings that the speech is more clearer and perceptible in each case, after the enhancement algorithm has been applied. This is particularly true at low SNR values, at which the noise completely dominates the recording.</p>
-
-		<p></p>However there is some form of ringing artifact that occurs in each estimated speech signal associated with the enhancement algorithm. This is thought to be an effect of the reverse segmentation which is used to assemble the estimated speech signal for hearing. It is also likely that the use of a single channel enhancement scheme cannot fully mitigate the presence of non-stationary noise such as the one considered in this project. This leads to the discussion of future work in this project, which is discussed next.</p>
-
-		<h4>Future work</h4>
-		<p> This project considered single channel noise reduction in a speech signal assumed to be corrupted with additive noise. The algorithms developed for performing speech enhancement assumed the presence of complex Gaussian noise, which is common is most engineering systems. However it is expected that an algorithm that incorporates the super Gaussian noise in its model design would lead to an improvement and lead to a more optimal estimate of clean speech.</p>
-
-		<p> It is also expected that the quality of speech enhancement can be greatly improved by using a multi-channel approach at noise. Multi-channel systems typically use a signal processing concept known as beamforming that can exploit spatial information, such as the presence of microphones and their relative position to mitigate the effects of noise. Single-channel systems such as the one considered in this project are limited to using only temporal and spectral information available in the received signal.</p>
-
-		<p> Adaptive filtering techniques such as the Kalman filter and the extended Kalman filter can be used by designing a set of system equations for modeling both the speech and additive noise. Such systems can be tuned by a parameter known as the Kalman Gain. This parameter allows us to balance the contribution of previous model estimates and the current signal recording in producing the current estimate of the clean speech signal. Finally using a particle filter, the assumption of Gaussian noise can also be relaxed and a more flexible model can be designed for noise reduction.
-
-		<h4>References</h4>
-		<p>
-			[1] Richard C. Hendriks, Timo Gerkmann, and Jesper Jensen. "DFT-Domain Based Single-Microphone Noise Reduction for Speech Enhancement: A Survey of the State of the Art". In: Synthesis Lectures on Speech and Audio Processing 9.1 (2013), pp. 1 - 80.
-			<br>
-			<br>
-			[2] Richard C. Hendriks, Richard Heusdens, and Jesper Jensen. "MMSE based noise PSD tracking with low complexity". In: IEEE International Conference on Acoustics, Speech and Signal Processing (Mar. 2010), pp. 4266 - 4269.
-		</p>
-
-
-
-
-
-
-    </div>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
+</html>

@@ -1,73 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Extra-curricular activities</title>
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yadnyesh Y. Luktuke - Extra-curricular Activities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-gray-800">Yadnyesh Y. Luktuke</div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
+                    <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="text-gray-800 hover:text-blue-600">Resume</a>
+                    <a href="projects.html" class="text-gray-800 hover:text-blue-600">Projects</a>
+                    <a href="summary.html" class="text-gray-800 hover:text-blue-600">Experience</a>
+                    <a href="volunteer_work.html" class="text-gray-800 hover:text-blue-600">Activities</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-3">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-blue-600">Home</a>
+                <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="block py-2 text-gray-800 hover:text-blue-600">Resume</a>
+                <a href="projects.html" class="block py-2 text-gray-800 hover:text-blue-600">Projects</a>
+                <a href="summary.html" class="block py-2 text-gray-800 hover:text-blue-600">Experience</a>
+                <a href="volunteer_work.html" class="block py-2 text-gray-800 hover:text-blue-600">Activities</a>
+            </div>
+        </nav>
+    </header>
 
-<body>
-    <div class="topnav">
-		<a href="index.html">Homepage</a>
-		<a href="Resume-Yadnyesh_Luktuke.pdf">Resume</a>
-		<div class="dropdown">
-			<button class="dropbtn">Projects
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="projects.html">Deep learning</a>
-				<a href="sp_projects.html">Speech processing</a>
-				<!--<a href="ml_projects.html">Machine Learning</a>-->
-			</div>
-		</div>
-		<a href="summary.html">Experience</a>
-		<a href="volunteer_work.html">Extra-curricular activities</a>
-		<a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ">Google Scholar Profile</a>
-		<div class="dropdown">
-			<button class="dropbtn">Social
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="https://www.linkedin.com/in/yyl1109/">LinkedIn</a>
-				<a href="https://github.com/Yashgh7076">GitHub</a>				
-			</div>
-		</div>
-    </div>
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">Extra-curricular Activities and Volunteer Work</h1>
+            
+            <p class="text-gray-700 mb-6">
+                I have been involved with different groups, sports teams, and organizing committees outside of regular course requirements. These experiences have given me a profound sense of freedom and belief that hard work and commitment should go beyond the classroom and office. I have made lifelong friends while being part of these different teams.
+            </p>
 
-    <div class="content">
-		<p> I have been involved with different groups, sports teams and organizing committees outside of the regular course requirements. These have genuinely given me a profound sense of freedom and belief that hard-work and commitment should go beyond the classroom and office. I have made friends while I was a part of these different teams, and many of these are life-long friendships that I will cherish.</p>
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Volunteer Work</h2>
+                
+                <h3 class="text-xl font-semibold text-gray-700 mt-4">Clemson University</h3>
+                <ul class="list-disc list-inside text-gray-700 mt-2">
+                    <li>Reviewed manuscripts for the IEEE - EMBS 16<sup>th</sup> International Conference on Wearable and Implantable Body Sensor Networks & the 2020 25<sup>th</sup> International Conference on Pattern Recognition.</li>
+                    <li>Served as the Graduate Student Senator and representative of the Electrical and Computer Engineering department in the Graduate Student Government (GSG) at Clemson University from Aug. 2018 to Jan. 2019.</li>
+                </ul>
 
-		<h2>Volunteer Work</h2>
+                <h3 class="text-xl font-semibold text-gray-700 mt-4">Maharashtra Institute of Technology - Pune</h3>
+                <ul class="list-disc list-inside text-gray-700 mt-2">
+                    <li>Worked as a Co-Researcher at the department of Computer Engineering (Feb. 2018 - Jul. 2018), under the supervision of Prof. Madhura Phatak. Our research focused on developing deep learning models that could predict a numerical score for the aesthetic quality of images and videos.</li>
+                    <li>Served as a judge for the technical competition Techzephyr - 2018 at M.I.T - Pune for different engineering projects related to image processing and pattern recognition.</li>
+                    <li>As a Graduate Student Volunteer at the department of Electronics & Telecommunication Engineering (Jan. 2014 - Apr. 2014), I was involved with preparing teaching material, conducting laboratory exercises, and grading student reports for undergraduate students.</li>
+                    <li>Served as the Head of the Medical Assistance Committee (2010 - 2011) at SUMMIT, the annual Inter-Engineering National Level Sports Meet held at M.I.T. - Pune. I was responsible for arranging first-aid and emergency medical services for all participating athletes.</li>
+                </ul>
+            </section>
 
-		<h3>Clemson University</h3>
-		<ol type="1">
-			<li> Reviewed manuscripts for the IEEE - EMBS 16<sup>th</sup> International Conference on Wearable and Implantable Body Sensor Networks & the 2020 25<sup>th</sup> International Conference on Pattern Recognition.</li> <br>
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Sports and Awards</h2>
+                
+                <h3 class="text-xl font-semibold text-gray-700 mt-4">Maharashtra Institute of Technology - Pune</h3>
+                <ul class="list-disc list-inside text-gray-700 mt-2">
+                    <li><strong>Swimming:</strong> Part of the men's swimming team since my first year, eventually appointed as captain in my final year. Won at various Inter-Collegiate and Inter-Engineering National Level aquatics meets. Recipient of the award for 'Performance in Inter-Engineering Sports - Swimming' from 2008 - 2012.</li>
+                    <li><strong>Waterpolo:</strong> Played one season (2010 - 2011) of Inter-Collegiate waterpolo at M.I.T - Pune. Stood third at the University of Pune Annual Aquatics Meet and won gold at the 'COEP-Zest 2011 Inter-Engineering National Level Aquatics Competition'. Received an award for 'Performance in Inter-Collegiate Sport - Waterpolo' along with my team in 2011.</li>
+                    <li><strong>Basketball:</strong> Part of the team and winners at the E&TC Department Intra-Department Basketball Tournament 2012. Started at the Guard position for the BE-I team and played important minutes in all games for our team.</li>
+                </ul>
+            </section>
 
-			<li> Served as the Graduate Student Senator and representative of the Electrical and Computer Engineering department in the Graduate Student Government (GSG) at Clemson University from Aug. 2018 to Jan. 2019.</li>
-		</ol>
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Technical Presentation</h2>
+                
+                <h3 class="text-xl font-semibold text-gray-700 mt-4">Maharashtra Institute of Technology - Pune</h3>
+                <p class="text-gray-700 mt-2">
+                    Prepared a technical review of background subtraction algorithms commonly used in video cameras. Our paper titled 'Adaptive Background Modelling Technique For Video Content Analysis' was presented at the National Conference on Futuristic Applications in Electronics Engineering (NCFAEE) in 2011 held at AISSMS-IOIT in Pune.
+                </p>
+            </section>
+        </div>
+    </main>
 
-		<h3>Maharashtra Institute of Technology - Pune</h3>
-		<ol type="1">
-			<li> Worked as a Co-Researcher at the department of Computer Engineering (Feb. 2018 - Jul. 2018), under the supervision of Prof. Madhura Phatak. Our research focused on developing deep learning models that could predict a numerical score for the aesthetic quality of images and videos. I also trained undergraduate and graduate students at software development using Python, TensorFlow and keras.</li><br>
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Yadnyesh Y. Luktuke. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="https://www.linkedin.com/in/yyl1109/" class="hover:text-blue-400">LinkedIn</a>
+                <a href="https://github.com/Yashgh7076" class="hover:text-blue-400">GitHub</a>
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ" class="hover:text-blue-400">Google Scholar</a>
+            </div>
+        </div>
+    </footer>
 
-			<li> Served as a judge for the technical competition Techzephyr - 2018 at M.I.T - Pune for different engineering projects related to image processing and pattern recognition.</li><br>
-
-			<li> As a Graduate Student Volunteer at the department of Electronics & Telecommunication Engineering (Jan. 2014 - Apr. 2014) I was involved with preparing the teaching material, conducting laboratory exercises and grading student reports for undergraduate students.</li><br>
-
-			<li> Served as the Head of the Medical Assistance Committee (2010 - 2011) at SUMMIT the annual Inter-Engineering National Level Sports Meet held at M.I.T. - Pune. In this position I was responsible for arranging first-aid and emergency medical services for all the participating athletes.</li>
-		</ol>
-
-		<h2>Sports and Awards</h2>
-		<h3>Maharashtra Institute of Technology - Pune</h3>
-		<ol type="1">
-			<li><b>Swimming:</b> I was part of the men's swimming team since my first year, eventually being appointed as captain of the team in my final year. I won at various Inter-Collegiate and Inter-Engineering National Level aquatics meets. Recipient of the award for 'Performance in Inter-Engineering Sports - Swimming' from 2008 - 2012.</li><br>
-
-			<li><b>Waterpolo:</b> I played one season (2010 - 2011) of Inter-Collegiate waterpolo at M.I.T - Pune when we stood third at the University of Pune Annual Aquatics Meet and won gold at the 'COEP-Zest 2011 Inter-Engineering National Level Aquatics Competition'. I received an award for 'Performance in Inter-Collegiate Sport - Waterpolo' along with my team for the same in 2011.</li><br>
-
-			<li><b>Basketball:</b> Part of the team and winners at the E&TC Department Intra-Department Basketball Tournament 2012. Started at the Guard position for the BE-I team and played important minutes in all games for our team.</li>
-		</ol>
-
-		<h2>Technical Presentation</h2>
-		<h3>Maharashtra Institute of Technology - Pune</h3>
-		<p> Prepared a technical review of background subtraction algorithms commonly used in video cameras. Our paper titled 'Adaptive Background Modelling Technique For Video Content Analysis' was presented at the National Conference on Futuristic Applications in Electronics Engineering (NCFAEE) in 2011 held at AISSMS-IOIT in Pune.</p>
-
-
-    </div>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
+</html>

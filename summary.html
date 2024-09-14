@@ -1,102 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Experience</title>
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yadnyesh Y. Luktuke - Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-gray-800">Yadnyesh Y. Luktuke</div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
+                    <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="text-gray-800 hover:text-blue-600">Resume</a>
+                    <a href="projects.html" class="text-gray-800 hover:text-blue-600">Projects</a>
+                    <a href="summary.html" class="text-gray-800 hover:text-blue-600">Experience</a>
+                    <a href="volunteer_work.html" class="text-gray-800 hover:text-blue-600">Activities</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-3">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-blue-600">Home</a>
+                <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="block py-2 text-gray-800 hover:text-blue-600">Resume</a>
+                <a href="projects.html" class="block py-2 text-gray-800 hover:text-blue-600">Projects</a>
+                <a href="summary.html" class="block py-2 text-gray-800 hover:text-blue-600">Experience</a>
+                <a href="volunteer_work.html" class="block py-2 text-gray-800 hover:text-blue-600">Activities</a>
+            </div>
+        </nav>
+    </header>
 
-<body>
-    <div class="topnav">
-        <a href="index.html">Homepage</a>
-		<a href="Resume-Yadnyesh_Luktuke.pdf">Resume</a>
-		<div class="dropdown">
-			<button class="dropbtn">Projects
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="projects.html">Deep learning</a>
-				<a href="sp_projects.html">Speech processing</a>
-				<!--<a href="ml_projects.html">Machine Learning</a>-->
-			</div>
-		</div>
-		<a href="summary.html">Experience</a>
-		<a href="volunteer_work.html">Extra-curricular activities</a>
-		<a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ">Google Scholar Profile</a>
-		<div class="dropdown">
-			<button class="dropbtn">Social
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="https://www.linkedin.com/in/yyl1109/">LinkedIn</a>
-				<a href="https://github.com/Yashgh7076">GitHub</a>				
-			</div>
-		</div>
-    </div>
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">Education and Experience</h1>
+            
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Education</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700">MS., Clemson University, Computer Engineering</h3>
+                        <p class="text-gray-600">Aug. 2018 - May 2020</p>
+                        <p class="text-gray-700 mt-2">
+                            MS Thesis: Segmentation and recognition of eating gestures from wrist motion using deep learning.
+                        </p>
+                        <p class="text-gray-700 mt-2">
+                            Courses: Analysis of Tracking Systems, Deep Learning, Introduction to Computer Vision, Instrumentation, Statistical Methods.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700">MSc., Delft University of Technology, Electrical Engineering</h3>
+                        <p class="text-gray-600">Sep. 2014 - Jan. 2017</p>
+                        <p class="text-gray-700 mt-2">
+                            MSc Thesis: Intensity normalization in brain MRI images using machine learning.
+                        </p>
+                        <p class="text-gray-700 mt-2">
+                            Courses: Digital Speech & Audio Processing, Digital Image Processing, Machine Learning, Pattern Recognition, Statistical Signal Processing.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700">BE., Maharashtra Institute of Technology - Pune, Electronics & Telecommunication Engineering</h3>
+                        <p class="text-gray-600">Aug. 2008 - May 2012</p>
+                    </div>
+                </div>
+            </section>
 
-    <div class="content">
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Professional Experience</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700">Graduate Grading Assistant and Graduate Teaching Assistant</h3>
+                        <p class="text-gray-600">Clemson University, Aug. 2018 - May 2020</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Graded assignments for undergraduate and graduate courses including Communication Systems, Signals & Systems, and Analysis of Tracking Systems</li>
+                            <li>Conducted laboratory experiments for Logic & Computing Devices course</li>
+                            <li>Oversaw final examinations and assisted with end-of-semester projects</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700">Graduate Student Summer Employee</h3>
+                        <p class="text-gray-600">Clemson University, May 2019 - Aug. 2019</p>
+                        <p class="text-gray-700 mt-2">
+                            Conducted research on cyclic conditional generative adversarial neural networks (CC-GAN) for synthetic image generation in phase-contrast microscopy. Achieved 0.9 similarity using the Pearson correlation coefficient with target images at low resolutions and close to 0.8 similarity at full resolution.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700">Co-Researcher</h3>
+                        <p class="text-gray-600">Maharashtra Institute of Technology - Pune, Feb. 2018 - July 2018</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Assisted in research on predicting aesthetic quality of images and videos using deep learning neural networks</li>
+                            <li>Conducted laboratory sessions for undergraduate and graduate students</li>
+                            <li>Trained students in programming using Python, TensorFlow, and Keras</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700">Data Scientist</h3>
+                        <p class="text-gray-600">Climate Connect Pvt. Ltd., Aug. 2017 - Jan. 2018</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Designed and implemented predictive models for forecasting trends in renewable energy and energy market data sets</li>
+                            <li>Developed a model with 36% better forecasting accuracy for predicting stock prices in the Indian Energy Exchange (IEX)</li>
+                            <li>Responsible for data scraping, software solution development, and debugging</li>
+                            <li>Utilized Python, R, SQL, and libraries such as numpy, pandas, scikit-learn, and scipy</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700">Engineer Trainee</h3>
+                        <p class="text-gray-600">Cognizant Technology Solutions Pvt. Ltd., Dec. 2012 - Oct. 2013</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Trained in Mainframe technology and IBM z/OS as part of the support team for Lloyds Bank Plc.</li>
+                            <li>Monitored jobs running on client servers and documented their start and end times</li>
+                            <li>Reported failure of critical jobs to higher management within the team and client organization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
-        <h2>Education</h2>
-        <ul style="list-style-type:disc;">
-			<li> <p> <b>MS., Clemson University, Computer Engineering, Aug. 2018 - May 2020.</b> </p>
-				 <p> MS Thesis: Segmentation and recognition of eating gestures from wrist motion using deep learning. </p>
-				 
-				 <p> Wrist motion that is recorded during eating can be catgorized into distinct categories or 'gestures' based on the specific activity occurring for a small period of time. Our project aimed to detect when motion was occurring and simultaneously identify the type or gesture associated with the motion. We designed a novel neural network that was capable of identifying different gestures related to eating with an accuracy of 80% and standard deviation of 20% on average per meal. For more information on the data please visit, <a href="http://cecas.clemson.edu/~ahoover/cafeteria/">Clemson Cafeteria Dataset</a>, and for the project itself please see, <a href="projects.html">Clemson University MS Thesis</a>. </p>
-				 <p> Courses: Analysis of Tracking Systems, Deep Learning, Introduction to Computer Vision, Instrumentation, Statistical Methods. </p>
-			</li>
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Yadnyesh Y. Luktuke. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="https://www.linkedin.com/in/yyl1109/" class="hover:text-blue-400">LinkedIn</a>
+                <a href="https://github.com/Yashgh7076" class="hover:text-blue-400">GitHub</a>
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ" class="hover:text-blue-400">Google Scholar</a>
+            </div>
+        </div>
+    </footer>
 
-			<li> <p> <b>MSc., Delft University of Technology, Electrical Engineering, Sep. 2014 - Jan. 2017.</b> </p>
-				<p> MSc Thesis: Intensity normalization in brain MRI images using machine learning. </p>
-				
-				<p> Conducted research on techniques for synthetically generating brain MRI images using a target intensity-scale. This method would transform MRI images from one intensity-scale to a fixed scale (target), and was proposed to expedite clinical diagnosis and follow-up studies in patients that relocated after serious injuries.</p>
-
-				<p> Courses: Digital Speech & Audio Processing, Digital Image Processing, Machine Learning, Pattern Recognition, Statistical Signal Processing.</p>
-		   </li>
-
-		   <li> <p> <b> BE., Maharashtra Institute of Technology - Pune, Electronics & Telecommunication Engineering, Aug. 2008 - May 2012. </b> </p> </li>
-			 <p> Intelligent Postal Automation System Service (I-PASS): Implemented a prototype device that could detect the script of the handwritten text on postal envelopes using a neural network algorithm. </p> 
-		</ul>
-
-		<h2> Professional Experience </h2>
-		<ul style="list-style-type: disc;">
-
-			<li> <p> <b>Graduate Grading Assistant and Graduate Teaching Assistant, Clemson University, Aug. 2018 - May 2020.</b> </p>
-
-				<p> I held the position as a grading assistant at Clemson University from Aug. 2018 till May 2020. My assignments included the courses Communication Systems and Signals & Systems for undergradute engineering students, and I was assigned as the grader for the graduate level course Analysis of Tracking Systems from Aug. 2019 - Dec. 2019.</p>
-
-				<p> In addition to this, I was appointed as a teaching assistant for the course Logic & Computing Devices from Jan. 2019 till May 2020. I conducted the laboratory experiments, and oversaw the undergraduate students as they conducted these. I was also responsible for conducting the final examination of this lab, and providing help to students in their end-of-semester projects.</p>
-
-			</li>
-
-			<li> <p> <b>Graduate Student Summer Employee, Clemson University, May 2019 - Aug. 2019. </b></p>
-
-				<p> Staining phase-contrast microscopy images is a common way of highlighting cellular matter for study in biological and life-sciences studies. However this approach needs to be done manually, requiring effort and can also destroy cellular matter once it has been stained.</p>
-
-				<p>Hence our approach was to use generative adversarial neural networks (GANs) to generate synthetic images that were similar to the target images stained by human operators. We conducted research on a new neural network known as cyclic conditional generative adversarial neural network (CC-GAN) by combining the objective functions and architectures of <a href="https://phillipi.github.io/pix2pix/">conditional GANs</a> and <a href="https://junyanz.github.io/CycleGAN/">cyclic GANs</a>. The resulting neural network achieved 0.9 similarity using the Pearson correlation coefficient with target images at low resolutions (256 x 256) and close to 0.8 similarity at full resolution (2048 x 2048). </p>
-
-		    </li>
-
-			<li> <p> <b>Co-Researcher, Maharashtra Institute of Technology - Pune, Feb. 2018 - July 2018.</b></p>
-
-				<p> My major responsibility under this position was to assist in research pertaining to predicting the aesthetic quality of images and videos. The goal of our project was to research deep learning neural networks that could predict a score based on aesthetic properties such as beauty, symmetry and content. 2D and 3D convolutional neural networks formed the backbone of our research for this project.</p>
-
-				<p> I was also responsible for conducting laboratory sessions for undergraduate and graduate students and training them in programming using Python, TensorFlow and Keras.</p>
-
-		    </li>
-
-			<li> <p> <b>Data Scientist, Climate Connect Pvt. Ltd., Aug. 2017 - Jan. 2018.</b></p>
-
-				 <p> Majorly worked on designing and implementing predictive models for forecasting trends in renewable energy and energy market data sets. My designed model had 36% better forecasting accuracy at predicting stock prices in the Indian Energy Exchange (IEX) for a period of 4 months. As part of my responsibilities as a Data Scientist I was also responsible for scraping data from client databases, developing software solutions and debugging them as required before their final deployment.</p>
-
-				 <p> During this time I used Python for most of the model development process. However I also worked sparingly with R programming for development on some of the companies older projects. I also have experience in writing SQL queries and in using the libraries numpy, pandas, scikit-learn and scipy having used these frequently during this time.</p>
-
-			</li>
-
-			<li> <p> <b>Engineer Trainee, Cognizant Technology Solutions Pvt. Ltd., Dec. 2012 - Oct. 2013.</b></p>
-
-				 <p> As a part of the support team within the offshore development center associated with Lloyds Bank Plc., I was trained in Mainframe technology and the IBM z/OS. My responsibilities included monitoring all jobs running on client servers and documenting their start and end times. I was also responsible for reporting failure of critical jobs to higher management within the team and the client organization as well.</p>
-
-			</li>
-
-		</ul>
-
-    </div>
-
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
+</html>

@@ -1,93 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Machine learning</title>
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yadnyesh Y. Luktuke - Machine Learning Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .custom-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .custom-table th, .custom-table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .custom-table th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+    </style>
 </head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-gray-800">Yadnyesh Y. Luktuke</div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
+                    <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="text-gray-800 hover:text-blue-600">Resume</a>
+                    <a href="projects.html" class="text-gray-800 hover:text-blue-600">Projects</a>
+                    <a href="summary.html" class="text-gray-800 hover:text-blue-600">Experience</a>
+                    <a href="volunteer_work.html" class="text-gray-800 hover:text-blue-600">Activities</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-3">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-blue-600">Home</a>
+                <a href="Resume-Yadnyesh_Luktuke-Software_Engineer.pdf" class="block py-2 text-gray-800 hover:text-blue-600">Resume</a>
+                <a href="projects.html" class="block py-2 text-gray-800 hover:text-blue-600">Projects</a>
+                <a href="summary.html" class="block py-2 text-gray-800 hover:text-blue-600">Experience</a>
+                <a href="volunteer_work.html" class="block py-2 text-gray-800 hover:text-blue-600">Activities</a>
+            </div>
+        </nav>
+    </header>
 
-<body>
-    <div class="topnav">
-		<a href="index.html">Homepage</a>
-		<a href="Resume-Yadnyesh_Luktuke.pdf">Resume</a>
-		<div class="dropdown">
-			<button class="dropbtn">Projects
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="projects.html">Deep learning</a>
-				<a href="sp_projects.html">Speech processing</a>
-				<!--<a href="ml_projects.html">Machine Learning</a>-->
-			</div>
-		</div>
-		<a href="summary.html">Experience</a>
-		<a href="volunteer_work.html">Extra-curricular activities</a>		
-		<a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ">Google Scholar Profile</a>
-		<div class="dropdown">
-			<button class="dropbtn">Social
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="https://www.linkedin.com/in/yyl1109/">LinkedIn</a>
-				<a href="https://github.com/Yashgh7076">GitHub</a>				
-			</div>
-		</div>
-    </div>
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">Machine Learning Projects</h1>
+            
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Predicting on Census Data</h2>
+                <p class="text-gray-700 mb-4">
+                    This project was part of my Machine Learning course at TU Delft. It was created as a Kaggle competition, seen here <a href="https://www.kaggle.com/c/final-assignment-in43202" class="text-blue-600 hover:underline">Final Assignment IN4320</a>. The goal was to predict if a person would earn 40,000 Euros a year based on census data.
+                </p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Challenges:</h3>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Handling missing data entries</li>
+                    <li>Dealing with both continuous and categorical features</li>
+                    <li>No particular ordering in categorical variables</li>
+                </ul>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Approach:</h3>
+                <ol class="list-decimal list-inside text-gray-700 mb-4">
+                    <li>One-hot encoding for categorical features</li>
+                    <li>Estimating distance from prototype examples</li>
+                    <li>Filling in missing values</li>
+                    <li>Using a feed-forward neural network for classification</li>
+                </ol>
+            </section>
 
-    <div class="content">
-		<h2>Machine learning</h2>
-		<p>Machine learning is the study of computer algorithms that learn to do a task by incrementally improving the model that is fit to data known as training data. Model fitting is the approach in which a mathematical equation or series of equations is used to describe the available data. Model fitting makes use of one or more characteristics of the data such as its appearance or distribution to generate such an equation or set of equations that describe the available data. Model fitting is used extensively in engineering and scientific studies to understand an underlying process that generates the available data.</p>
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Data Processing</h2>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">One-hot Encoding:</h3>
+                <p class="text-gray-700 mb-4">
+                    Categorical features were converted to one-hot encoded representation to avoid implying an order or importance based on numeric values.
+                </p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Handling Missing Data:</h3>
+                <p class="text-gray-700 mb-4">
+                    For continuous features, we used mean imputation. For categorical features, we used the mode (most commonly occurring category).
+                </p>
+            </section>
 
-		<p>The usefulness of a model is determined by how accurately the equation or set of equations can be used to describe the data already available, or new data that becomes available after a model is fit to a particular data set. In machine learning fits, the model is fit to data known as training data. However the performance of a machine learning model is usually determined based on how well the model can predict or describe data that it has not seen before, which is called the test data. This is usually a part of the training data itself, but is separated before the model is fit, and reserved for testing once a suitable model has been found. This process is also known as training the machine learning algorithm.</p>
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Classification Model</h2>
+                <p class="text-gray-700 mb-4">
+                    We implemented a feed-forward neural network with the following architecture:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Two hidden layers (150 neurons and 100 neurons)</li>
+                    <li>Binary sigmoid activation function for hidden layers</li>
+                    <li>Single neuron output layer with binary sigmoid activation</li>
+                    <li>Threshold set close to 0.7 for final classification</li>
+                </ul>
+                <p class="text-gray-700 mb-4">
+                    The overall classification accuracy of the neural network classifier was 83.45%, which was the highest achieved among all classifiers we tried.
+                </p>
+            </section>
+        </div>
+    </main>
 
-		<p> We may also choose to evaluate the model continuously, as it is being trained, by further separating a small part of training data before the model is fit and evaluating the model performance on both the training data and the new data set known as validation data. In such a case, we expect that the model performance improves incrementally well for both the training data and the validation data during training. This is considered separate from the model performance on the test data, which is evaluated once the model has been trained.</p>
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Yadnyesh Y. Luktuke. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="https://www.linkedin.com/in/yyl1109/" class="hover:text-blue-400">LinkedIn</a>
+                <a href="https://github.com/Yashgh7076" class="hover:text-blue-400">GitHub</a>
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Nra34h0AAAAJ" class="hover:text-blue-400">Google Scholar</a>
+            </div>
+        </div>
+    </footer>
 
-		<p>Based on the available data, and the choice of model that is being fit to it, machine learning can be broadly classified into supervised learning and unsupervised learning. In the former, the expected behavior of the model is known beforehand and is stored in vectors known as targets or labels for the model to train on. These are usually generated synthetically by humans that can observe the original process, and hence know how to characterize its behavior. In contrast, in unsupervised learning, the target vectors are unknown or cannot be generated. The machine learning model that is fit to such data typically makes use of some or the other optimality criterion that can be easily understood based on the characteristic of the data such as its apparance, distribution or the relationship between its components.</p>
-
-		<h3> Predicting on census data</h3>
-		<p> This project was part of my course Machine Learning at TU Delft. It was created as a Kaggle competition, seen here <a href="https://www.kaggle.com/c/final-assignment-in43202">Final Assignment IN4320</a>. The goal was to study different approaches for data processing, and classification that could be used to predict if a person would earn 40,000 Euros a year based on data collected from the census bureau. This was challenging because such data typically contains missing entries, because people do not answer all optional questions in surveys, which are the common way of collecting such data. In addition, the data contained both continuous and categorical features, with no particular ordering in the categorical variables. The instructors added an additional level of difficulty by increasing the percentage of missing entries, either by manual intervention or by choosing a particularly difficult data set to begin with. However the specific mode of data acquisition was not conveyed to us.</p>
-
-		<h4>Data</h4>
-		<p> A typical example of data contained in the data set is seen below. Please note that the entries with not a number (NaN) indicate that the data for that particular column are missing for the particular data entry.</p>
-		<table class="center">
-			<caption> Data set containing missing entries </caption>
-			<tr> <th>age</th> <th>work</th> <th>education</th> <th>education years</th> <th>marital status</th> <th>occupation</th> <th>relationship</th> <th>race</th> <th>sex</th> <th>investment income</th> <th>investment losses</th> <th>work (hrs/week)</th> <th>native country</th>	</tr>
-
-			<tr> <td>12.414</td> <td>92</td> <td>20</td> <td>NaN</td> <td>65</td> <td>14</td> <td>68</td> <td>101</td> <td>59</td> <td>692.01</td> <td>NaN</td> <td>NaN</td> <td>NaN</td> </tr>
-
-			<tr> <td>7.3211</td> <td>88</td> <td>3</td> <td>2.2282</td> <td>61</td> <td>96</td> <td>49</td> <td>101</td> <td>59</td> <td>NaN</td> <td>0</td> <td>19.099</td> <td>98</td> </tr>
-
-		</table><br>
-
-		<h4>One-hot encoding the categorical features</h4>
-		<p>The categorical features were numbered, however these weren't ordered based on any priority. Such features can be converted to one-hot encoded numbers. In fact as per [1], it is recommended to convert such features to their respective one-hot encoded representation in order to use these features with any classifier. This is because a classifier may treat categorical features having higher numeric values as more important than those with lower values. However this is generally not the case. This is especially useful when categorical features are ordered based on priority, as lower numeric values are more important than higher ones.</p>
-
-		<p>A categorical feature is converted to its one-hot representation by counting the total number of categories present in that particular feature, and creating a vector of the same size. Each bit of the vector is then turned on (set to 1) or turned off (set to 0) based on the position of the specific catgeory in the order. For example consider a feature containing 6 categories. Then a feature value of 1 in the data set, indicating the first category would be represented by [1 0 0 0 0 0]<sup>T</sup>, a value of 2 would be represented as [0 1 0 0 0 0]<sup>T</sup> and so on till the final catgorical value 6, which would be represented as [0 0 0 0 0 1]<sup>T</sup>.</p>
-
-		<p>In order to have the same one-hot representation for categorical features in the train and test data sets, it was necessary to ensure that each categorical variable had the same number of categories in each data set. The total number of categories present in each set is shown below:</p>
-
-		<table class="center">
-			<caption> Different number of categories in train and test sets.</caption>
-			<tr> <th>work</th> <th>education</th> <th>marital status</th> <th>occupation</th> <th>relationship</th> <th>race</th> <th>sex</th> <th>native country</th> </tr>
-
-			<tr> <td>7</td> <td>16</td> <td>7</td> <td>14</td> <td>6</td> <td>5</td> <td>2</td> <td>40</td> </tr>
-
-			<tr> <td>8</td> <td>16</td> <td>7</td> <td>14</td> <td>6</td> <td>5</td> <td>2</td> <td>41</td> </tr>
-
-		</table><br>
-
-		<p>As it can be seen from the above table, the categorical features work and native country contained more categories in the test set as compared to the train set. Since there was a possibility of this leading to different one-hot representations for these in the train set and test set, these features were not considered further when designing classifiers for the data. The one-hot representation for each of the other categorical features resulted in a total of 55 features (continuous and one-hot encoded) for training classifiers. Based on how the missing data entries were handled, two different approaches at classification were considered. These are explained in detail below.</p>
-
-		<h4>Approach 1: Estimate distance from prototype examples</h4>
-
-		<h4>Approach 2: Fill in missing values</h4>
-		<p> On observation, both train and test data sets contained randomly missing entries, and there seemed to be no pattern to the missing entries, i.e. data was missing completely at random. In addition, there were very few entires that contained no missing data. Only about 600 entries contained no missing information from 10,500, the total number of entries. As the data contained mixed features (continuous and categorical), there was no method reported in literature that could be used to estimate the missing entries using an approach such as a joint distribution of the features.</p>
-
-		<p>It was thus decided to treat each feature as an independent random process and estimate missing values independent of each other. For continuous features, the technique of mean imputation was used, which replaces missing values with the mean of the distribution over the available features. A similar approach is followed for categorical features, but uses the mode (most commonly occuring category) of each categorical feature. The rationale behind using such an approach is that given a large enough sample size, the most commonly occurring category could be assumed to be true for the categorical features considered. Similarly the class mean is a good representative for continuous features that may be missing, given a large sample size.</p>
-
-		<p>Please note that this step of data imputation should precede any other form of data preprocessing, such as the one-hot encoding described earlier in order to avoid erroneous output. In addition, such an approach should be applied independently on the train and test data in order to account for different distributions of features within each data set.</p>
-
-		<p> Once the data set is ready, two classifiers were considered for training on it. Initially a random forest classifier was thought to be useful in classifying data from this data, owing to the mixed nature of the features. However it achieved a very low classification accuracy on the test set. Since the final goal of this assignment was to achieve a high score on the Kaggle leaderboard, a random forest classifier was not considered further.</p>
-
-		<p> Next a conventional feed-forward neural network was considered with two hidden layers containing 150 neurons and 100 neurons respectively. The binary sigmoid was used as the activation function of the hidden layers. The output layer contained a single neuron with the binary sigmoid activation function as well. The required classifier output was '0' indicating less than 40,000 Euros earned and '1' indicating 40,000 Euros or more earned in a year respectively. This was achieved by thresholding the neural network response, with a threshold set close to 0.7. The overall classification accuracy of the neural network classifier was 83.45%, which was the highest achieved among all classifiers. Hence this classifier and output were chosen for the final submission on the competition page. </p>
-
-
-    </div>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
+</html>
